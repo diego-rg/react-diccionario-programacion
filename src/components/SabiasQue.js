@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import diccionario from "../api/diccionario";
 
+//Componente que hace una request a la Api del diccionario para obtener un término aleatorio y renderizar sus datos a modo de "Sabías que...?"
 const SabiasQue = () => {
   const [result, setResult] = useState({});
 
@@ -14,9 +15,9 @@ const SabiasQue = () => {
   }, []);
   return (
     <div>
-      <h1>{result.name}</h1>
-      <h2>{result.definition}</h2>
-      <h3>{result.category}</h3>
+      <div>Sabías que...?</div>
+      <div>{result.name}</div>
+      <div>{result.definition}</div>
     </div>
   );
 };
