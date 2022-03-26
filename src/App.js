@@ -1,7 +1,8 @@
 import React from "react";
+import SabiasQue from "./components/SabiasQue";
 
 const App = () => {
-  return <h1>Hi</h1>;
+  return <SabiasQue />;
 };
 
 export default App;
