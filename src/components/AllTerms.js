@@ -3,15 +3,15 @@ import diccionario from "../api/diccionario";
 
 //Componente que hace una request a la Api del diccionario para obtener todos los términos
 const SabiasQue = () => {
-  const [results, setResults] = useState([]);
+  const [terms, setTerms] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [termSelected, setTermSelected] = useState("");
+  const [selectedTerm, setSelectedTerm] = useState(null);
 
   //fetch all terms
   useEffect(() => {
     const allTerms = async () => {
       const { data } = await diccionario.get("/terms/all");
-      setResults(data.terms);
+      setTerms(data.terms);
     };
     allTerms();
   }, []);
@@ -25,8 +25,12 @@ const SabiasQue = () => {
     allCategories();
   }, []);
 
-  const renderedTerms = results.map((result) => {
-    return <button key={result._id}>{result.name}</button>;
+  const renderedTerms = terms.map((term) => {
+    return (
+      <button onClick={() => setSelectedTerm(term)} key={term._id}>
+        {term.name}
+      </button>
+    );
   });
 
   const renderedCategories = categories.map((category) => {
@@ -40,6 +44,18 @@ const SabiasQue = () => {
         {renderedCategories}
       </div>
       <div>{renderedTerms}</div>
+      <textarea
+        name="definitions"
+        id="definitions"
+        cols="100"
+        rows="5"
+        value={
+          selectedTerm
+            ? selectedTerm.definition
+            : "Haga click en un término para ver su definición."
+        }
+        onChange={(e) => setSelectedTerm(e.target.value)}
+      ></textarea>
     </div>
   );
 };
