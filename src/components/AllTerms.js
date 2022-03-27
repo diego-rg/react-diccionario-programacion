@@ -7,6 +7,7 @@ const SabiasQue = () => {
   const [categories, setCategories] = useState([]);
   const [termSelected, setTermSelected] = useState("");
 
+  //fetch all terms
   useEffect(() => {
     const allTerms = async () => {
       const { data } = await diccionario.get("/terms/all");
@@ -15,11 +16,32 @@ const SabiasQue = () => {
     allTerms();
   }, []);
 
-  const renderedResults = results.map((result) => {
+  //fetch all categs
+  useEffect(() => {
+    const allCategories = async () => {
+      const { data } = await diccionario.get("/terms/categories");
+      setCategories(data.categories);
+    };
+    allCategories();
+  }, []);
+
+  const renderedTerms = results.map((result) => {
     return <button key={result._id}>{result.name}</button>;
   });
 
-  return <div>{renderedResults}</div>;
+  const renderedCategories = categories.map((category) => {
+    return <button key={category}>{category}</button>;
+  });
+
+  return (
+    <div>
+      <div>
+        <button key="todos">Todos</button>
+        {renderedCategories}
+      </div>
+      <div>{renderedTerms}</div>
+    </div>
+  );
 };
 
 export default SabiasQue;
