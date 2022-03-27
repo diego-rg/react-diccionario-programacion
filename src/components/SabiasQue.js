@@ -9,7 +9,6 @@ const SabiasQue = () => {
     const random = async () => {
       const { data } = await diccionario.get("/terms/random");
       setResult(data.random);
-      console.log(data.random);
     };
     random();
   }, []);
