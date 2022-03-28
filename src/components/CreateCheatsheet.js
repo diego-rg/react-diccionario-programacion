@@ -8,7 +8,9 @@ const CreateCheatsheet = ({ terms, categories }) => {
 
   //función para guardar un término
   const saveTerm = (term) => {
-    setSavedTerm([...savedTerms, term]);
+    if (!savedTerms.includes(term)) {
+      setSavedTerm([...savedTerms, term]);
+    }
   };
 
   const renderedSavedTerms = !savedTerms.length
