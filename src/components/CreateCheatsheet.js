@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-//Componente que hace una request a la Api del diccionario para obtener todos los términos y ver su definición al hacer click en ellos
+//Componente que hace una request a la Api del diccionario para obtener terms los términos y ver su definición al hacer click en ellos
 //Recibimos terms, categories como props
 const CreateCheatsheet = ({ terms, categories }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -13,11 +13,19 @@ const CreateCheatsheet = ({ terms, categories }) => {
     }
   };
 
+  //función para guardar un término
+  const deleteTerm = (term) => {
+    let index = savedTerms.indexOf(term); //calculamos o índice dos terms poder selecionalo e eliminalo
+    savedTerms.splice(index, 1); //eliminamos o seleccionado polo seu indice
+    setSavedTerm([...savedTerms]); //gardamos o novo array si o eliminado
+  };
+
+  //Botones de cada término añadido para poder eliminarlo
   const renderedSavedTerms = !savedTerms.length
     ? "Haz click en un término para añadirlo a tus apuntes."
     : savedTerms.map((term) => {
         return (
-          <button onClick={() => saveTerm(term)} key={term._id}>
+          <button onClick={() => deleteTerm(term)} key={term._id}>
             {term.name}
           </button>
         );
@@ -55,12 +63,13 @@ const CreateCheatsheet = ({ terms, categories }) => {
   return (
     <div>
       <div>
-        <button onClick={() => setSelectedCategory(null)} key="todos">
+        <button onClick={() => setSelectedCategory(null)} key="terms">
           Todos
         </button>
         {renderedCategories}
       </div>
       <div>{selectedCategory ? termsByCategory : renderedTerms}</div>
+      <br />
       <div>{renderedSavedTerms}</div>
     </div>
   );
