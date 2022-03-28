@@ -1,30 +1,10 @@
-import React, { useState, useEffect } from "react";
-import diccionario from "../api/dictionary";
+import React, { useState } from "react";
 
 //Componente que hace una request a la Api del diccionario para obtener todos los términos y ver su definición al hacer click en ellos
-const SabiasQue = () => {
-  const [terms, setTerms] = useState([]);
-  const [categories, setCategories] = useState([]);
+//Recibimos terms, categories como props
+const SabiasQue = ({ terms, categories }) => {
   const [selectedTerm, setSelectedTerm] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
-
-  //fetch all terms
-  useEffect(() => {
-    const allTerms = async () => {
-      const { data } = await diccionario.get("/terms/all");
-      setTerms(data.terms);
-    };
-    allTerms();
-  }, []);
-
-  //fetch all categs
-  useEffect(() => {
-    const allCategories = async () => {
-      const { data } = await diccionario.get("/terms/categories");
-      setCategories(data.categories);
-    };
-    allCategories();
-  }, []);
 
   //Botones de cada término que escriben la definición en el textarea
   const renderedTerms = terms.map((term) => {
