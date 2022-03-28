@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import dictionary from "./api/dictionary";
 import DidYouKnow from "./components/DidYouKnow";
 import CheckTerms from "./components/CheckTerms";
+import CreateCheatsheet from "./components/CreateCheatsheet";
 
 const App = () => {
   const [terms, setTerms] = useState([]);
@@ -30,6 +31,9 @@ const App = () => {
     <div>
       <DidYouKnow />
       <CheckTerms terms={terms} categories={categories} />
+      <br />
+      <br />
+      <CreateCheatsheet terms={terms} categories={categories} />
     </div>
   );
 };

@@ -2,14 +2,29 @@ import React, { useState } from "react";
 
 //Componente que hace una request a la Api del diccionario para obtener todos los términos y ver su definición al hacer click en ellos
 //Recibimos terms, categories como props
-const SabiasQue = ({ terms, categories }) => {
-  const [selectedTerm, setSelectedTerm] = useState(null);
+const CreateCheatsheet = ({ terms, categories }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [savedTerms, setSavedTerm] = useState([]);
 
-  //Botones de cada término que escriben la definición en el textarea
+  //función para guardar un término
+  const saveTerm = (term) => {
+    setSavedTerm([...savedTerms, term]);
+  };
+
+  const renderedSavedTerms = !savedTerms.length
+    ? "Haz click en un término para añadirlo a tus apuntes."
+    : savedTerms.map((term) => {
+        return (
+          <button onClick={() => saveTerm(term)} key={term._id}>
+            {term.name}
+          </button>
+        );
+      });
+
+  //Botones de cada término que añaden el término en los apuntes
   const renderedTerms = terms.map((term) => {
     return (
-      <button onClick={() => setSelectedTerm(term)} key={term._id}>
+      <button onClick={() => saveTerm(term)} key={term._id}>
         {term.name}
       </button>
     );
@@ -29,7 +44,7 @@ const SabiasQue = ({ terms, categories }) => {
     .filter((t) => t.category === selectedCategory)
     .map((term) => {
       return (
-        <button onClick={() => setSelectedTerm(term)} key={term._id}>
+        <button onClick={() => saveTerm(term)} key={term._id}>
           {term.name}
         </button>
       );
@@ -44,20 +59,9 @@ const SabiasQue = ({ terms, categories }) => {
         {renderedCategories}
       </div>
       <div>{selectedCategory ? termsByCategory : renderedTerms}</div>
-      <textarea
-        name="definitions"
-        id="definitions"
-        cols="75"
-        rows="5"
-        value={
-          selectedTerm
-            ? `${selectedTerm.name}: ${selectedTerm.definition}`
-            : "Haz click en un término para ver su definición."
-        }
-        onChange={(e) => setSelectedTerm(e.target.value)}
-      ></textarea>
+      <div>{renderedSavedTerms}</div>
     </div>
   );
 };
 
-export default SabiasQue;
+export default CreateCheatsheet;
