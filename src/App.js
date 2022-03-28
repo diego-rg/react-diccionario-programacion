@@ -1,11 +1,11 @@
 import React from "react";
-import SabiasQue from "./components/SabiasQue";
+import DidYouKnow from "./components/DidYouKnow";
 import AllTerms from "./components/AllTerms";
 
 const App = () => {
   return (
     <div>
-      <SabiasQue />
+      <DidYouKnow />
       <AllTerms />
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import diccionario from "../api/diccionario";
+import diccionario from "../api/dictionary";
 
 //Componente que hace una request a la Api del diccionario para obtener todos los términos y ver su definición al hacer click en ellos
 const SabiasQue = () => {
