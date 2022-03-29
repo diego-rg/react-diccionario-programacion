@@ -61,7 +61,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
     });
 
   return (
-    <div>
+    <main>
       <div>
         <button onClick={() => setSelectedCategory(null)} key="terms">
           Todos
@@ -71,7 +71,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
       <div>{selectedCategory ? termsByCategory : renderedTerms}</div>
       <br />
       <div>{renderedSavedTerms}</div>
-    </div>
+    </main>
   );
 };
 

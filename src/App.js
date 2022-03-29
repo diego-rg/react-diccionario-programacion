@@ -32,7 +32,7 @@ const App = () => {
 
   //Pasamos os terms e as categories como props
   return (
-    <div>
+    <div className="app-container">
       <Header />
       <Route path="/">
         <Home />

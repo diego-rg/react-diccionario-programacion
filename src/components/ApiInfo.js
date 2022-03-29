@@ -2,9 +2,9 @@ import React from "react";
 
 const ApiInfo = () => {
   return (
-    <div>
+    <main>
       <div>ApiInfo</div>
-    </div>
+    </main>
   );
 };
 
