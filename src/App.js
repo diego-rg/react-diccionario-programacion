@@ -3,6 +3,10 @@ import dictionary from "./api/dictionary";
 import DidYouKnow from "./components/DidYouKnow";
 import CheckTerms from "./components/CheckTerms";
 import CreateCheatsheet from "./components/CreateCheatsheet";
+import Header from "./components/Header";
+import Route from "./components/Route";
+import Home from "./components/Home";
+import ApiInfo from "./components/ApiInfo";
 
 const App = () => {
   const [terms, setTerms] = useState([]);
@@ -29,11 +33,20 @@ const App = () => {
   //Pasamos os terms e as categories como props
   return (
     <div>
-      <DidYouKnow />
-      <CheckTerms terms={terms} categories={categories} />
-      <br />
-      <br />
-      <CreateCheatsheet terms={terms} categories={categories} />
+      <Header />
+      <Route path="/">
+        <Home />
+        <DidYouKnow />
+      </Route>
+      <Route path="/api">
+        <ApiInfo />
+      </Route>
+      <Route path="/dictionary">
+        <CheckTerms terms={terms} categories={categories} />
+      </Route>
+      <Route path="/cheatsheet">
+        <CreateCheatsheet terms={terms} categories={categories} />
+      </Route>
     </div>
   );
 };
