@@ -51,7 +51,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
 
   //Función filtrar por categorías
   const termsByCategory = terms
-    .filter((t) => t.category === selectedCategory)
+    .filter((term) => term.category === selectedCategory)
     .map((term) => {
       return (
         <button onClick={() => saveTerm(term)} key={term._id}>
