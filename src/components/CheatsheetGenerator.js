@@ -1,5 +1,5 @@
 import React from "react";
-import { Document, Packer, Paragraph, TextRun } from "docx";
+import { Document, Packer, Paragraph, TextRun, Header, Footer } from "docx";
 import { saveAs } from "file-saver";
 
 const CheatsheetGenerator = ({ savedTerms }) => {
@@ -11,24 +11,46 @@ const CheatsheetGenerator = ({ savedTerms }) => {
       cheatsheetData.push(
         new Paragraph({
           children: [
-            new TextRun(`${savedTerms[i].name}: ${savedTerms[i].definition}`),
+            new TextRun({
+              text: `${savedTerms[i].name}: `,
+              bold: true,
+            }),
+            new TextRun(`${savedTerms[i].definition}`),
           ],
         })
       );
     }
 
     const doc = new Document({
+      creator: "diego-rg",
+      description:
+        "Apuntes generados con https://github.com/diego-rg/react-diccionario-programacion",
+      title: "Mis apuntes de programación",
       sections: [
         {
           properties: {
             page: {
               margin: {
-                top: 300,
-                right: 300,
-                bottom: 300,
-                left: 300,
+                top: 500,
+                right: 500,
+                bottom: 500,
+                left: 500,
               },
             },
+          },
+          headers: {
+            default: new Header({
+              children: [new Paragraph("Apuntes de Programación")],
+            }),
+          },
+          footers: {
+            default: new Footer({
+              children: [
+                new Paragraph(
+                  "https://github.com/diego-rg/react-diccionario-programacion"
+                ),
+              ],
+            }),
           },
           children: cheatsheetData,
         },
