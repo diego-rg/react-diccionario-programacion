@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CheatsheetGenerator from "./CheatsheetGenerator";
 
 //Componente que hace una request a la Api del diccionario para obtener terms los términos y ver su definición al hacer click en ellos
 //Recibimos terms, categories como props
@@ -71,6 +72,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
       <div>{selectedCategory ? termsByCategory : renderedTerms}</div>
       <br />
       <div>{renderedSavedTerms}</div>
+      <CheatsheetGenerator savedTerms={savedTerms} />
     </main>
   );
 };
