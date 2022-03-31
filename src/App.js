@@ -7,16 +7,25 @@ import Header from "./components/Header";
 import Route from "./components/Route";
 import Home from "./components/Home";
 import ApiInfo from "./components/ApiInfo";
+import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
+import IconButton from "@mui/material/IconButton";
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
   const [terms, setTerms] = useState([]);
   const [categories, setCategories] = useState([]);
 
   //fetch all terms
   useEffect(() => {
     const allTerms = async () => {
-      const { data } = await dictionary.get("/terms/all");
-      setTerms(data.terms);
+      setLoading(true);
+      try {
+        const { data } = await dictionary.get("/terms/all");
+        setTerms(data.terms);
+      } catch (error) {
+        console.error(error.message);
+      }
+      setLoading(false);
     };
     allTerms();
   }, []);
@@ -24,14 +33,24 @@ const App = () => {
   //fetch all categs
   useEffect(() => {
     const allCategories = async () => {
-      const { data } = await dictionary.get("/terms/categories");
-      setCategories(data.categories);
+      setLoading(true);
+      try {
+        const { data } = await dictionary.get("/terms/categories");
+        setCategories(data.categories);
+      } catch (error) {
+        console.error(error.message);
+      }
+      setLoading(false);
     };
     allCategories();
   }, []);
 
   //Pasamos os terms e as categories como props
-  return (
+  return loading ? (
+    <IconButton color="primary" size="large">
+      <HourglassEmptyIcon />
+    </IconButton>
+  ) : (
     <div className="app-container">
       <Header />
       <Route path="/">

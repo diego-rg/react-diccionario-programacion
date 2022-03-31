@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
 
 //Componente que hace una request a la Api del diccionario para obtener todos los términos y ver su definición al hacer click en ellos
 //Recibimos terms, categories como props
@@ -63,18 +64,22 @@ const SabiasQue = ({ terms, categories }) => {
         {renderedCategories}
       </div>
       <div>{selectedCategory ? termsByCategory : renderedTerms}</div>
-      <textarea
+      <TextField
+        multiline
+        fullWidth
+        InputProps={{
+          readOnly: true,
+        }}
+        variant="outlined"
         name="definitions"
         id="definitions"
-        cols="75"
-        rows="5"
         value={
           selectedTerm
             ? `${selectedTerm.name}: ${selectedTerm.definition}`
             : "Haz click en un término para ver su definición."
         }
         onChange={(e) => setSelectedTerm(e.target.value)}
-      ></textarea>
+      ></TextField>
     </div>
   );
 };
