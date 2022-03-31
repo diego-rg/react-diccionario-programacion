@@ -32,7 +32,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
             variant="outlined"
             size="small"
             color="error"
-            startIcon={<DeleteIcon />}
+            endIcon={<DeleteIcon />}
             onClick={() => deleteTerm(term)}
             key={term._id}
           >

@@ -1,6 +1,8 @@
 import React from "react";
 import { Document, Packer, Paragraph, TextRun, Header, Footer } from "docx";
 import { saveAs } from "file-saver";
+import Button from "@mui/material/Button";
+import SaveIcon from "@mui/icons-material/Save";
 
 const CheatsheetGenerator = ({ savedTerms }) => {
   //Xeración do doc
@@ -76,7 +78,16 @@ const CheatsheetGenerator = ({ savedTerms }) => {
     });
   };
 
-  return <button onClick={generateCheatsheet}>Descargar apuntes</button>;
+  return (
+    <Button
+      variant="contained"
+      color="success"
+      startIcon={<SaveIcon />}
+      onClick={generateCheatsheet}
+    >
+      Descargar apuntes
+    </Button>
+  );
 };
 
 export default CheatsheetGenerator;
