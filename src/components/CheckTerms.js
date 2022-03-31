@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "@mui/material/Button";
 
 //Componente que hace una request a la Api del diccionario para obtener todos los términos y ver su definición al hacer click en ellos
 //Recibimos terms, categories como props
@@ -9,18 +10,27 @@ const SabiasQue = ({ terms, categories }) => {
   //Botones de cada término que escriben la definición en el textarea
   const renderedTerms = terms.map((term) => {
     return (
-      <button onClick={() => setSelectedTerm(term)} key={term._id}>
+      <Button
+        variant="outlined"
+        size="small"
+        onClick={() => setSelectedTerm(term)}
+        key={term._id}
+      >
         {term.name}
-      </button>
+      </Button>
     );
   });
 
   //Botones de cada categoría que filtran los términos
   const renderedCategories = categories.map((category) => {
     return (
-      <button onClick={() => setSelectedCategory(category)} key={category}>
+      <Button
+        variant="contained"
+        onClick={() => setSelectedCategory(category)}
+        key={category}
+      >
         {category}
-      </button>
+      </Button>
     );
   });
 
@@ -29,18 +39,27 @@ const SabiasQue = ({ terms, categories }) => {
     .filter((term) => term.category === selectedCategory)
     .map((term) => {
       return (
-        <button onClick={() => setSelectedTerm(term)} key={term._id}>
+        <Button
+          variant="outlined"
+          size="small"
+          onClick={() => setSelectedTerm(term)}
+          key={term._id}
+        >
           {term.name}
-        </button>
+        </Button>
       );
     });
 
   return (
     <div>
       <div>
-        <button onClick={() => setSelectedCategory(null)} key="todos">
+        <Button
+          variant="contained"
+          onClick={() => setSelectedCategory(null)}
+          key="todos"
+        >
           Todos
-        </button>
+        </Button>
         {renderedCategories}
       </div>
       <div>{selectedCategory ? termsByCategory : renderedTerms}</div>

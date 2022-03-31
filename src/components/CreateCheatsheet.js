@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import CheatsheetGenerator from "./CheatsheetGenerator";
+import Button from "@mui/material/Button";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 //Componente que hace una request a la Api del diccionario para obtener terms los términos y ver su definición al hacer click en ellos
 //Recibimos terms, categories como props
@@ -26,27 +28,43 @@ const CreateCheatsheet = ({ terms, categories }) => {
     ? "Haz click en un término para añadirlo a tus apuntes."
     : savedTerms.map((term) => {
         return (
-          <button onClick={() => deleteTerm(term)} key={term._id}>
+          <Button
+            variant="outlined"
+            size="small"
+            color="error"
+            startIcon={<DeleteIcon />}
+            onClick={() => deleteTerm(term)}
+            key={term._id}
+          >
             {term.name}
-          </button>
+          </Button>
         );
       });
 
   //Botones de cada término que añaden el término en los apuntes
   const renderedTerms = terms.map((term) => {
     return (
-      <button onClick={() => saveTerm(term)} key={term._id}>
+      <Button
+        variant="outlined"
+        size="small"
+        onClick={() => saveTerm(term)}
+        key={term._id}
+      >
         {term.name}
-      </button>
+      </Button>
     );
   });
 
   //Botones de cada categoría que filtran los términos
   const renderedCategories = categories.map((category) => {
     return (
-      <button onClick={() => setSelectedCategory(category)} key={category}>
+      <Button
+        variant="contained"
+        onClick={() => setSelectedCategory(category)}
+        key={category}
+      >
         {category}
-      </button>
+      </Button>
     );
   });
 
@@ -55,18 +73,27 @@ const CreateCheatsheet = ({ terms, categories }) => {
     .filter((term) => term.category === selectedCategory)
     .map((term) => {
       return (
-        <button onClick={() => saveTerm(term)} key={term._id}>
+        <Button
+          variant="outlined"
+          size="small"
+          onClick={() => saveTerm(term)}
+          key={term._id}
+        >
           {term.name}
-        </button>
+        </Button>
       );
     });
 
   return (
     <main>
       <div>
-        <button onClick={() => setSelectedCategory(null)} key="terms">
+        <Button
+          variant="contained"
+          onClick={() => setSelectedCategory(null)}
+          key="terms"
+        >
           Todos
-        </button>
+        </Button>
         {renderedCategories}
       </div>
       <div>{selectedCategory ? termsByCategory : renderedTerms}</div>

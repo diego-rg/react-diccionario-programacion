@@ -40,15 +40,29 @@ const CheatsheetGenerator = ({ savedTerms }) => {
           },
           headers: {
             default: new Header({
-              children: [new Paragraph("Apuntes de Programación")],
+              children: [
+                new Paragraph({
+                  children: [
+                    new TextRun({
+                      text: "Apuntes Programación",
+                      bold: true,
+                    }),
+                  ],
+                }),
+              ],
             }),
           },
           footers: {
             default: new Footer({
               children: [
-                new Paragraph(
-                  "https://github.com/diego-rg/react-diccionario-programacion"
-                ),
+                new Paragraph({
+                  children: [
+                    new TextRun({
+                      text: "https://github.com/diego-rg/react-diccionario-programacion",
+                      bold: true,
+                    }),
+                  ],
+                }),
               ],
             }),
           },
