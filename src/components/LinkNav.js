@@ -1,6 +1,7 @@
 import React from "react";
+import Link from "@mui/material/Link";
 
-const Link = ({ className, href, children }) => {
+const LinkNav = ({ className, href, children }) => {
   const onClick = (event) => {
     event.preventDefault(); //evitar que recargue
     window.history.pushState({}, "", href); //Cambiar a url según o compoñente
@@ -9,10 +10,16 @@ const Link = ({ className, href, children }) => {
   };
 
   return (
-    <a onClick={onClick} className={className} href={href}>
+    <Link
+      underline="none"
+      color="white"
+      onClick={onClick}
+      className={className}
+      href={href}
+    >
       {children}
-    </a>
+    </Link>
   );
 };
 
-export default Link;
+export default LinkNav;
