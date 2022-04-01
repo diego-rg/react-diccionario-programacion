@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "@mui/material/Link";
+import "@fontsource/dancing-script";
 
 const LinkNav = ({ className, href, children }) => {
   const onClick = (event) => {
@@ -11,8 +12,11 @@ const LinkNav = ({ className, href, children }) => {
 
   return (
     <Link
+      sx={{ m: 2 }}
+      fontFamily={"Dancing Script"}
+      fontSize={30}
       underline="none"
-      color="white"
+      color="black"
       onClick={onClick}
       className={className}
       href={href}
