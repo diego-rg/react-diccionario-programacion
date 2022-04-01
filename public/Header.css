@@ -1,0 +1,11 @@
+.nav-container {
+  height: 50vh;
+  background-image: url(./book-menu.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav-container a {
+  color: black;
+}

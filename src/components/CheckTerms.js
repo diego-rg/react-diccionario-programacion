@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
+import Container from "@mui/material/Container";
 
 //Componente que hace una request a la Api del diccionario para obtener todos los términos y ver su definición al hacer click en ellos
 //Recibimos terms, categories como props
@@ -52,7 +53,7 @@ const SabiasQue = ({ terms, categories }) => {
     });
 
   return (
-    <div>
+    <Container maxWidth="md">
       <div>
         <Button
           variant="contained"
@@ -80,7 +81,7 @@ const SabiasQue = ({ terms, categories }) => {
         }
         onChange={(e) => setSelectedTerm(e.target.value)}
       ></TextField>
-    </div>
+    </Container>
   );
 };
 
