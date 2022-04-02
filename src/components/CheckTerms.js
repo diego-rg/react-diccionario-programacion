@@ -28,6 +28,7 @@ const SabiasQue = ({ terms, categories }) => {
     return (
       <Button
         variant="contained"
+        size="small"
         onClick={() => setSelectedCategory(category)}
         key={category}
       >
@@ -57,6 +58,7 @@ const SabiasQue = ({ terms, categories }) => {
       <div>
         <Button
           variant="contained"
+          size="small"
           onClick={() => setSelectedCategory(null)}
           key="todos"
         >

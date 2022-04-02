@@ -9,6 +9,18 @@ import Home from "./components/Home";
 import ApiInfo from "./components/ApiInfo";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 import IconButton from "@mui/material/IconButton";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#898989",
+    },
+    secondary: {
+      main: "#C5E3EC",
+    },
+  },
+});
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -51,22 +63,24 @@ const App = () => {
       <HourglassEmptyIcon />
     </IconButton>
   ) : (
-    <div className="app-container">
-      <Header />
-      <Route path="/">
-        <Home />
-        <DidYouKnow />
-      </Route>
-      <Route path="/api">
-        <ApiInfo />
-      </Route>
-      <Route path="/dictionary">
-        <CheckTerms terms={terms} categories={categories} />
-      </Route>
-      <Route path="/cheatsheet">
-        <CreateCheatsheet terms={terms} categories={categories} />
-      </Route>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="app-container">
+        <Header />
+        <Route path="/">
+          <Home />
+          <DidYouKnow />
+        </Route>
+        <Route path="/api">
+          <ApiInfo />
+        </Route>
+        <Route path="/dictionary">
+          <CheckTerms terms={terms} categories={categories} />
+        </Route>
+        <Route path="/cheatsheet">
+          <CreateCheatsheet terms={terms} categories={categories} />
+        </Route>
+      </div>
+    </ThemeProvider>
   );
 };
 
