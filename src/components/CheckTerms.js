@@ -14,7 +14,6 @@ const SabiasQue = ({ terms, categories }) => {
     return (
       <Button
         variant="outlined"
-        size="small"
         onClick={() => setSelectedTerm(term)}
         key={term._id}
       >
@@ -28,7 +27,6 @@ const SabiasQue = ({ terms, categories }) => {
     return (
       <Button
         variant="contained"
-        size="small"
         onClick={() => setSelectedCategory(category)}
         key={category}
       >
@@ -44,7 +42,6 @@ const SabiasQue = ({ terms, categories }) => {
       return (
         <Button
           variant="outlined"
-          size="small"
           onClick={() => setSelectedTerm(term)}
           key={term._id}
         >
@@ -54,19 +51,34 @@ const SabiasQue = ({ terms, categories }) => {
     });
 
   return (
-    <Container maxWidth="md">
-      <div>
+    <Container maxWidth="lg">
+      <Container
+        sx={{
+          m: 1,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <Button
           variant="contained"
-          size="small"
           onClick={() => setSelectedCategory(null)}
           key="todos"
         >
           Todos
         </Button>
         {renderedCategories}
-      </div>
-      <div>{selectedCategory ? termsByCategory : renderedTerms}</div>
+      </Container>
+      <Container
+        sx={{
+          m: 1,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        {selectedCategory ? termsByCategory : renderedTerms}
+      </Container>
       <TextField
         multiline
         fullWidth

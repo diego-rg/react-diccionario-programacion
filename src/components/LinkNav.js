@@ -12,7 +12,12 @@ const LinkNav = ({ className, href, children }) => {
 
   return (
     <Link
-      sx={{ m: 2 }}
+      sx={{
+        m: 2,
+        "&:hover": {
+          color: "primary.main",
+        },
+      }}
       fontFamily={"Dancing Script"}
       fontSize={30}
       underline="none"

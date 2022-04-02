@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CheatsheetGenerator from "./CheatsheetGenerator";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { Container } from "@mui/material";
 
 //Componente que hace una request a la Api del diccionario para obtener terms los términos y ver su definición al hacer click en ellos
 //Recibimos terms, categories como props
@@ -24,32 +25,24 @@ const CreateCheatsheet = ({ terms, categories }) => {
   };
 
   //Botones de cada término añadido para poder eliminarlo
-  const renderedSavedTerms = !savedTerms.length
-    ? "Haz click en un término para añadirlo a tus apuntes."
-    : savedTerms.map((term) => {
-        return (
-          <Button
-            variant="outlined"
-            size="small"
-            color="error"
-            endIcon={<DeleteIcon />}
-            onClick={() => deleteTerm(term)}
-            key={term._id}
-          >
-            {term.name}
-          </Button>
-        );
-      });
+  const renderedSavedTerms = savedTerms.map((term) => {
+    return (
+      <Button
+        variant="outlined"
+        color="error"
+        endIcon={<DeleteIcon />}
+        onClick={() => deleteTerm(term)}
+        key={term._id}
+      >
+        {term.name}
+      </Button>
+    );
+  });
 
   //Botones de cada término que añaden el término en los apuntes
   const renderedTerms = terms.map((term) => {
     return (
-      <Button
-        variant="outlined"
-        size="small"
-        onClick={() => saveTerm(term)}
-        key={term._id}
-      >
+      <Button variant="outlined" onClick={() => saveTerm(term)} key={term._id}>
         {term.name}
       </Button>
     );
@@ -75,7 +68,6 @@ const CreateCheatsheet = ({ terms, categories }) => {
       return (
         <Button
           variant="outlined"
-          size="small"
           onClick={() => saveTerm(term)}
           key={term._id}
         >
@@ -86,7 +78,15 @@ const CreateCheatsheet = ({ terms, categories }) => {
 
   return (
     <main>
-      <div>
+      <Container
+        maxWidth="lg"
+        sx={{
+          m: 1,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <Button
           variant="contained"
           onClick={() => setSelectedCategory(null)}
@@ -95,10 +95,22 @@ const CreateCheatsheet = ({ terms, categories }) => {
           Todos
         </Button>
         {renderedCategories}
-      </div>
-      <div>{selectedCategory ? termsByCategory : renderedTerms}</div>
-      <br />
-      <div>{renderedSavedTerms}</div>
+      </Container>
+      <Container
+        sx={{
+          m: 1,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        {selectedCategory ? termsByCategory : renderedTerms}
+        <Container>
+          {!savedTerms.length
+            ? "Haz click en un término para añadirlo a tus apuntes."
+            : renderedSavedTerms}
+        </Container>
+      </Container>
       <CheatsheetGenerator savedTerms={savedTerms} />
     </main>
   );

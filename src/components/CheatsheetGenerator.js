@@ -3,6 +3,7 @@ import { Document, Packer, Paragraph, TextRun, Header, Footer } from "docx";
 import { saveAs } from "file-saver";
 import Button from "@mui/material/Button";
 import SaveIcon from "@mui/icons-material/Save";
+import { Container } from "@mui/material";
 
 const CheatsheetGenerator = ({ savedTerms }) => {
   //Xeración do doc
@@ -79,14 +80,16 @@ const CheatsheetGenerator = ({ savedTerms }) => {
   };
 
   return (
-    <Button
-      variant="contained"
-      color="success"
-      startIcon={<SaveIcon />}
-      onClick={generateCheatsheet}
-    >
-      Descargar apuntes
-    </Button>
+    <Container maxwidth="lg">
+      <Button
+        variant="contained"
+        color="primary"
+        startIcon={<SaveIcon />}
+        onClick={generateCheatsheet}
+      >
+        Descargar apuntes
+      </Button>
+    </Container>
   );
 };
 
