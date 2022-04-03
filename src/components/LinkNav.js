@@ -4,24 +4,24 @@ import "@fontsource/dancing-script";
 
 const LinkNav = ({ className, href, children }) => {
   const onClick = (event) => {
-    event.preventDefault(); //evitar que recargue
+    event.preventDefault(); //Evitar que recargue
     window.history.pushState({}, "", href); //Cambiar a url según o compoñente
     const navEvent = new PopStateEvent("popstate");
-    window.dispatchEvent(navEvent); //Detectan que a url cambia
+    window.dispatchEvent(navEvent); //Detectar que a url cambia
   };
 
   return (
     <Link
       sx={{
+        fontFamily: "Dancing Script",
+        fontSize: { xs: 22, md: 32 },
         m: 2,
+        textDecoration: "none",
+        color: "black",
         "&:hover": {
           color: "primary.main",
         },
       }}
-      fontFamily={"Dancing Script"}
-      fontSize={30}
-      underline="none"
-      color="black"
       onClick={onClick}
       className={className}
       href={href}

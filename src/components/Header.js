@@ -22,7 +22,7 @@ const Header = () => {
               <LinkNav href="/">Inicio</LinkNav>
               <LinkNav href="/api">Api</LinkNav>
               <LinkNav href="/dictionary">Diccionario</LinkNav>
-              <LinkNav href="/cheatsheet">Crear apuntes</LinkNav>
+              <LinkNav href="/cheatsheet">Apuntes</LinkNav>
             </Toolbar>
           </AppBar>
         </nav>
