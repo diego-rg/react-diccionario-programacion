@@ -65,7 +65,14 @@ const App = () => {
     </IconButton>
   ) : (
     <ThemeProvider theme={theme}>
-      <Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <Header />
         <Route path="/">
           <Home />
