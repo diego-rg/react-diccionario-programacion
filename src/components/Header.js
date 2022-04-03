@@ -6,32 +6,24 @@ import Toolbar from "@mui/material/Toolbar";
 
 const Header = () => {
   return (
-    <Box
+    <AppBar
+      position="static"
       sx={{
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
+        justifyContent: "center",
+        background: "transparent",
+        boxShadow: "none",
       }}
     >
-      <AppBar
-        position="static"
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "transparent",
-          boxShadow: "none",
-        }}
-      >
-        <Toolbar>
-          <LinkNav href="/">Inicio</LinkNav>
-          <LinkNav href="/api">Api</LinkNav>
-          <LinkNav href="/dictionary">Diccionario</LinkNav>
-          <LinkNav href="/cheatsheet">Apuntes</LinkNav>
-        </Toolbar>
-      </AppBar>
-    </Box>
+      <Toolbar>
+        <LinkNav href="/">Inicio</LinkNav>
+        <LinkNav href="/api">Api</LinkNav>
+        <LinkNav href="/dictionary">Diccionario</LinkNav>
+        <LinkNav href="/cheatsheet">Apuntes</LinkNav>
+      </Toolbar>
+    </AppBar>
   );
 };
 
