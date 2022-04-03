@@ -10,7 +10,7 @@ import ApiInfo from "./components/ApiInfo";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 import IconButton from "@mui/material/IconButton";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { Container } from "@mui/material";
+import { Box } from "@mui/material";
 
 const theme = createTheme({
   palette: {
@@ -65,7 +65,7 @@ const App = () => {
     </IconButton>
   ) : (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="lg" className="app-container">
+      <Box>
         <Header />
         <Route path="/">
           <Home />
@@ -80,7 +80,7 @@ const App = () => {
         <Route path="/cheatsheet">
           <CreateCheatsheet terms={terms} categories={categories} />
         </Route>
-      </Container>
+      </Box>
     </ThemeProvider>
   );
 };

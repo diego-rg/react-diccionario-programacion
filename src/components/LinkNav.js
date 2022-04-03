@@ -14,10 +14,10 @@ const LinkNav = ({ className, href, children }) => {
     <Link
       sx={{
         fontFamily: "Dancing Script",
-        fontSize: { xs: 22, md: 32 },
-        m: 2,
+        fontSize: { xs: 18, md: 32 },
+        m: { xs: 1, md: 3 },
         textDecoration: "none",
-        color: "black",
+        color: { xs: "white", md: "black" },
         "&:hover": {
           color: "primary.main",
         },
