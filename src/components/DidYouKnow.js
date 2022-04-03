@@ -33,7 +33,7 @@ const DidYouKnow = () => {
       sx={{
         alignSelf: { md: "flex-end" },
         marginRight: {
-          md: 5,
+          md: 15,
         },
         textAlign: "center",
         maxWidth: { xs: 200, md: 300 },

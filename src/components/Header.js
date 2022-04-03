@@ -9,6 +9,9 @@ const Header = () => {
     <AppBar
       position="static"
       sx={{
+        marginTop: {
+          md: 4,
+        },
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
