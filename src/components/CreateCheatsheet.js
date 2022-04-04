@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CheatsheetGenerator from "./CheatsheetGenerator";
+
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Box, Container } from "@mui/material";
@@ -140,7 +141,13 @@ const CreateCheatsheet = ({ terms, categories }) => {
           justifyContent: "center",
         }}
       >
-        <Typography>
+        <Typography
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           {!savedTerms.length
             ? "Haz click en un término para añadirlo a tus apuntes."
             : renderedSavedTerms}

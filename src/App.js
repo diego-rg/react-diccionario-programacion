@@ -15,17 +15,17 @@ import { Box } from "@mui/material";
 
 const theme = createTheme({
   typography: {
-    fontFamily: "Dancing Script",
-    fontSize: 20,
+    fontFamily: "Josefin Sans",
+    fontSize: 18,
   },
-  palette: {
-    primary: {
-      main: "#898989",
-    },
-    secondary: {
-      main: "#C5E3EC",
-    },
-  },
+  // palette: {
+  //   primary: {
+  //     main: "#898989",
+  //   },
+  //   secondary: {
+  //     main: "#C5E3EC",
+  //   },
+  // },
 });
 
 const App = () => {

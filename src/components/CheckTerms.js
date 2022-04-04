@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { Box, Container } from "@mui/material";
@@ -13,6 +14,9 @@ const SabiasQue = ({ terms, categories }) => {
   const renderedTerms = terms.map((term) => {
     return (
       <Button
+        sx={{
+          m: 0.5,
+        }}
         variant="outlined"
         onClick={() => setSelectedTerm(term)}
         key={term._id}
@@ -26,6 +30,9 @@ const SabiasQue = ({ terms, categories }) => {
   const renderedCategories = categories.map((category) => {
     return (
       <Button
+        sx={{
+          m: 0.5,
+        }}
         variant="contained"
         onClick={() => setSelectedCategory(category)}
         key={category}
@@ -41,6 +48,9 @@ const SabiasQue = ({ terms, categories }) => {
     .map((term) => {
       return (
         <Button
+          sx={{
+            m: 0.5,
+          }}
           variant="outlined"
           onClick={() => setSelectedTerm(term)}
           key={term._id}
@@ -66,6 +76,9 @@ const SabiasQue = ({ terms, categories }) => {
         }}
       >
         <Button
+          sx={{
+            m: 0.5,
+          }}
           variant="contained"
           onClick={() => setSelectedCategory(null)}
           key="todos"
@@ -85,7 +98,6 @@ const SabiasQue = ({ terms, categories }) => {
         {selectedCategory ? termsByCategory : renderedTerms}
       </Box>
       <TextField
-        fontFamily="roboto,"
         multiline
         fullWidth
         InputProps={{

@@ -95,7 +95,7 @@ const CheatsheetGenerator = ({ savedTerms }) => {
           justifyContent: "center",
         }}
         variant="contained"
-        color="primary"
+        color="success"
         startIcon={<SaveIcon />}
         onClick={generateCheatsheet}
       >
