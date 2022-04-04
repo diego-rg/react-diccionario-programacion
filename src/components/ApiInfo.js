@@ -1,7 +1,7 @@
 import React from "react";
 import apiText from "../api/apiText";
 
-import { Container, Box, Input } from "@mui/material";
+import { Container, Input } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import IconButton from "@mui/material/IconButton";
@@ -13,7 +13,8 @@ const ApiInfo = () => {
     return (
       <List
         sx={{
-          paddingBottom: 3,
+          width: "100%",
+          paddingBottom: 1,
         }}
         key={line.title}
       >
@@ -42,6 +43,7 @@ const ApiInfo = () => {
                 // },
               }
             }
+            fullWidth
             readOnly
             type="text"
             id={line.title}
@@ -82,7 +84,7 @@ const ApiInfo = () => {
         marginTop: 5,
       }}
     >
-      <Box>{renderedText}</Box>
+      {renderedText}
     </Container>
   );
 };
