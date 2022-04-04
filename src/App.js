@@ -7,12 +7,17 @@ import Header from "./components/Header";
 import Route from "./components/Route";
 import Home from "./components/Home";
 import ApiInfo from "./components/ApiInfo";
+
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 import IconButton from "@mui/material/IconButton";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Box } from "@mui/material";
 
 const theme = createTheme({
+  typography: {
+    fontFamily: "Dancing Script",
+    fontSize: 20,
+  },
   palette: {
     primary: {
       main: "#898989",

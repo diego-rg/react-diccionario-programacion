@@ -1,10 +1,12 @@
 import React from "react";
 
+import { Box, Typography } from "@mui/material";
+
 const ApiInfo = () => {
   return (
-    <main>
-      <div>ApiInfo</div>
-    </main>
+    <Box>
+      <Typography>Api</Typography>
+    </Box>
   );
 };
 

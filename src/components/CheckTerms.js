@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import Container from "@mui/material/Container";
+import { Box, Container } from "@mui/material";
 
 //Componente que hace una request a la Api del diccionario para obtener todos los términos y ver su definición al hacer click en ellos
 //Recibimos terms, categories como props
@@ -51,8 +51,13 @@ const SabiasQue = ({ terms, categories }) => {
     });
 
   return (
-    <Container maxWidth="lg">
-      <Container
+    <Container
+      component="main"
+      sx={{
+        marginTop: 5,
+      }}
+    >
+      <Box
         sx={{
           m: 1,
           display: "flex",
@@ -68,8 +73,8 @@ const SabiasQue = ({ terms, categories }) => {
           Todos
         </Button>
         {renderedCategories}
-      </Container>
-      <Container
+      </Box>
+      <Box
         sx={{
           m: 1,
           display: "flex",
@@ -78,8 +83,9 @@ const SabiasQue = ({ terms, categories }) => {
         }}
       >
         {selectedCategory ? termsByCategory : renderedTerms}
-      </Container>
+      </Box>
       <TextField
+        fontFamily="roboto,"
         multiline
         fullWidth
         InputProps={{

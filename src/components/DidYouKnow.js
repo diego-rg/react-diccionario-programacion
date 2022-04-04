@@ -3,7 +3,7 @@ import diccionario from "../api/dictionary";
 
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 import IconButton from "@mui/material/IconButton";
-import { Box } from "@mui/system";
+import { Box } from "@mui/material";
 
 //Componente que hace una request a la Api del diccionario para obtener un término aleatorio y usarlo a modo de "Sabías que...?"
 const DidYouKnow = () => {
@@ -44,7 +44,7 @@ const DidYouKnow = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        background: "rgba(128,128,128, 0.1)",
+        background: "rgba(128,128,128, 0.4)",
       }}
     >
       <Box

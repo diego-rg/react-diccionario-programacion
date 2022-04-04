@@ -18,7 +18,7 @@ const LinkNav = ({ className, href, children }) => {
         fontSize: { xs: 18, md: 32 },
         m: { xs: 1, md: 3 },
         textDecoration: "none",
-        color: { xs: "white", md: "black" },
+        color: "black",
         "&:hover": {
           color: "primary.main",
         },

@@ -1,10 +1,12 @@
 import React from "react";
 
+import { Box, Typography } from "@mui/material";
+
 const Home = () => {
   return (
-    <main>
-      <div>Home</div>
-    </main>
+    <Box>
+      <Typography>Home</Typography>
+    </Box>
   );
 };
 
