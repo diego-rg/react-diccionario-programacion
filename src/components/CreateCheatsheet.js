@@ -35,6 +35,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
           alignItems: "center",
           justifyContent: "center",
         }}
+        size="small"
         variant="outlined"
         color="error"
         endIcon={<DeleteIcon />}
@@ -53,6 +54,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
         sx={{
           m: 0.5,
         }}
+        size="small"
         variant="outlined"
         onClick={() => saveTerm(term)}
         key={term._id}
@@ -69,6 +71,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
         sx={{
           m: 0.5,
         }}
+        size="small"
         variant="contained"
         onClick={() => setSelectedCategory(category)}
         key={category}
@@ -87,6 +90,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
           sx={{
             m: 0.5,
           }}
+          size="small"
           variant="outlined"
           onClick={() => saveTerm(term)}
           key={term._id}
@@ -115,6 +119,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
           sx={{
             m: 0.5,
           }}
+          size="small"
           variant="contained"
           onClick={() => setSelectedCategory(null)}
           key="terms"

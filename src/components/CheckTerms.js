@@ -17,6 +17,7 @@ const SabiasQue = ({ terms, categories }) => {
         sx={{
           m: 0.5,
         }}
+        size="small"
         variant="outlined"
         onClick={() => setSelectedTerm(term)}
         key={term._id}
@@ -33,6 +34,7 @@ const SabiasQue = ({ terms, categories }) => {
         sx={{
           m: 0.5,
         }}
+        size="small"
         variant="contained"
         onClick={() => setSelectedCategory(category)}
         key={category}
@@ -51,6 +53,7 @@ const SabiasQue = ({ terms, categories }) => {
           sx={{
             m: 0.5,
           }}
+          size="small"
           variant="outlined"
           onClick={() => setSelectedTerm(term)}
           key={term._id}
@@ -79,6 +82,7 @@ const SabiasQue = ({ terms, categories }) => {
           sx={{
             m: 0.5,
           }}
+          size="small"
           variant="contained"
           onClick={() => setSelectedCategory(null)}
           key="todos"
