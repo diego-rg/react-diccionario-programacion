@@ -3,7 +3,7 @@ import CheatsheetGenerator from "./CheatsheetGenerator";
 
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { Box, Container } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import { Typography } from "@mui/material";
 
 //Recibimos terms, categories como props
@@ -28,56 +28,48 @@ const CreateCheatsheet = ({ terms, categories }) => {
   //Botones de cada término añadido para poder eliminarlo
   const renderedSavedTerms = savedTerms.map((term) => {
     return (
-      <Button
-        sx={{
-          m: 0.5,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-        size="small"
-        variant="outlined"
-        color="error"
-        endIcon={<DeleteIcon />}
-        onClick={() => deleteTerm(term)}
-        key={term._id}
-      >
-        {term.name}
-      </Button>
+      <Grid item key={term._id}>
+        <Button
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+          size="small"
+          variant="outlined"
+          color="error"
+          endIcon={<DeleteIcon />}
+          onClick={() => deleteTerm(term)}
+        >
+          {term.name}
+        </Button>
+      </Grid>
     );
   });
 
   //Botones de cada término que añaden el término en los apuntes
   const renderedTerms = terms.map((term) => {
     return (
-      <Button
-        sx={{
-          m: 0.5,
-        }}
-        size="small"
-        variant="outlined"
-        onClick={() => saveTerm(term)}
-        key={term._id}
-      >
-        {term.name}
-      </Button>
+      <Grid item key={term._id}>
+        <Button size="small" variant="outlined" onClick={() => saveTerm(term)}>
+          {term.name}
+        </Button>
+      </Grid>
     );
   });
 
   //Botones de cada categoría que filtran los términos
   const renderedCategories = categories.map((category) => {
     return (
-      <Button
-        sx={{
-          m: 0.5,
-        }}
-        size="small"
-        variant="contained"
-        onClick={() => setSelectedCategory(category)}
-        key={category}
-      >
-        {category}
-      </Button>
+      <Grid item key={category}>
+        <Button
+          size="small"
+          variant="contained"
+          onClick={() => setSelectedCategory(category)}
+        >
+          {category}
+        </Button>
+      </Grid>
     );
   });
 
@@ -86,17 +78,15 @@ const CreateCheatsheet = ({ terms, categories }) => {
     .filter((term) => term.category === selectedCategory)
     .map((term) => {
       return (
-        <Button
-          sx={{
-            m: 0.5,
-          }}
-          size="small"
-          variant="outlined"
-          onClick={() => saveTerm(term)}
-          key={term._id}
-        >
-          {term.name}
-        </Button>
+        <Grid item key={term._id}>
+          <Button
+            size="small"
+            variant="outlined"
+            onClick={() => saveTerm(term)}
+          >
+            {term.name}
+          </Button>
+        </Grid>
       );
     });
 
@@ -107,61 +97,118 @@ const CreateCheatsheet = ({ terms, categories }) => {
         marginTop: 5,
       }}
     >
-      <Box
-        sx={{
-          m: 1,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
+      <Grid
+        container
+        spacing={0.5}
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
       >
-        <Button
-          sx={{
-            m: 0.5,
-          }}
-          size="small"
-          variant="contained"
-          onClick={() => setSelectedCategory(null)}
-          key="terms"
-        >
-          Todos
-        </Button>
+        <Grid item>
+          <Button
+            size="small"
+            variant="contained"
+            onClick={() => setSelectedCategory(null)}
+            key="todos"
+          >
+            Todos
+          </Button>
+        </Grid>
         {renderedCategories}
-      </Box>
-      <Box
+      </Grid>
+      <Grid
+        container
+        spacing={0.5}
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
         sx={{
-          m: 1,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          marginTop: 2,
         }}
       >
         {selectedCategory ? termsByCategory : renderedTerms}
-      </Box>
-      <Box
+      </Grid>
+      <Grid
+        container
+        spacing={0.5}
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
         sx={{
-          m: 1,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          marginTop: 2,
         }}
       >
-        <Typography
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          {!savedTerms.length
-            ? "Haz click en un término para añadirlo a tus apuntes."
-            : renderedSavedTerms}
-        </Typography>
-      </Box>
-
+        {!savedTerms.length
+          ? "Haz click en un término para añadirlo a tus apuntes."
+          : renderedSavedTerms}
+      </Grid>
       <CheatsheetGenerator savedTerms={savedTerms} />
     </Container>
   );
 };
+
+//   return (
+//     <Container
+//       component="main"
+//       sx={{
+//         marginTop: 5,
+//       }}
+//     >
+//       <Box
+//         sx={{
+//           m: 1,
+//           display: "flex",
+//           alignItems: "center",
+//           justifyContent: "center",
+//         }}
+//       >
+//         <Button
+//           sx={{
+//             m: 0.5,
+//           }}
+//           size="small"
+//           variant="contained"
+//           onClick={() => setSelectedCategory(null)}
+//           key="terms"
+//         >
+//           Todos
+//         </Button>
+//         {renderedCategories}
+//       </Box>
+//       <Box
+//         sx={{
+//           m: 1,
+//           display: "flex",
+//           alignItems: "center",
+//           justifyContent: "center",
+//         }}
+//       >
+//         {selectedCategory ? termsByCategory : renderedTerms}
+//       </Box>
+//       <Box
+//         sx={{
+//           m: 1,
+//           display: "flex",
+//           alignItems: "center",
+//           justifyContent: "center",
+//         }}
+//       >
+//         <Typography
+//           sx={{
+//             display: "flex",
+//             alignItems: "center",
+//             justifyContent: "center",
+//           }}
+//         >
+//           {!savedTerms.length
+//             ? "Haz click en un término para añadirlo a tus apuntes."
+//             : renderedSavedTerms}
+//         </Typography>
+//       </Box>
+
+//       <CheatsheetGenerator savedTerms={savedTerms} />
+//     </Container>
+//   );
+// };
 
 export default CreateCheatsheet;
