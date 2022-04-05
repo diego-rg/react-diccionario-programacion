@@ -3,8 +3,7 @@ import CheatsheetGenerator from "./CheatsheetGenerator";
 
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { Box, Container, Grid } from "@mui/material";
-import { Typography } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 
 //Recibimos terms, categories como props
 const CreateCheatsheet = ({ terms, categories }) => {
@@ -104,12 +103,11 @@ const CreateCheatsheet = ({ terms, categories }) => {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item>
+        <Grid item key="todos">
           <Button
             size="small"
             variant="contained"
             onClick={() => setSelectedCategory(null)}
-            key="todos"
           >
             Todos
           </Button>
@@ -146,69 +144,5 @@ const CreateCheatsheet = ({ terms, categories }) => {
     </Container>
   );
 };
-
-//   return (
-//     <Container
-//       component="main"
-//       sx={{
-//         marginTop: 5,
-//       }}
-//     >
-//       <Box
-//         sx={{
-//           m: 1,
-//           display: "flex",
-//           alignItems: "center",
-//           justifyContent: "center",
-//         }}
-//       >
-//         <Button
-//           sx={{
-//             m: 0.5,
-//           }}
-//           size="small"
-//           variant="contained"
-//           onClick={() => setSelectedCategory(null)}
-//           key="terms"
-//         >
-//           Todos
-//         </Button>
-//         {renderedCategories}
-//       </Box>
-//       <Box
-//         sx={{
-//           m: 1,
-//           display: "flex",
-//           alignItems: "center",
-//           justifyContent: "center",
-//         }}
-//       >
-//         {selectedCategory ? termsByCategory : renderedTerms}
-//       </Box>
-//       <Box
-//         sx={{
-//           m: 1,
-//           display: "flex",
-//           alignItems: "center",
-//           justifyContent: "center",
-//         }}
-//       >
-//         <Typography
-//           sx={{
-//             display: "flex",
-//             alignItems: "center",
-//             justifyContent: "center",
-//           }}
-//         >
-//           {!savedTerms.length
-//             ? "Haz click en un término para añadirlo a tus apuntes."
-//             : renderedSavedTerms}
-//         </Typography>
-//       </Box>
-
-//       <CheatsheetGenerator savedTerms={savedTerms} />
-//     </Container>
-//   );
-// };
 
 export default CreateCheatsheet;

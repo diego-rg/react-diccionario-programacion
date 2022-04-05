@@ -58,47 +58,6 @@ const DidYouKnow = () => {
       <Box>{`${result.name}: ${result.definition}`}</Box>
     </Paper>
   );
-
-  // return loading ? (
-  //   <IconButton color="primary" size="large">
-  //     <HourglassEmptyIcon />
-  //   </IconButton>
-  // ) : (
-  //   <Box
-  //     sx={{
-  //       alignSelf: { md: "flex-end" },
-  //       marginRight: {
-  //         md: 15,
-  //       },
-  //       textAlign: "center",
-  //       maxWidth: { xs: 200, md: 300 },
-  //       padding: 2,
-  //       boxShadow: 3,
-  //       borderRadius: "12px",
-  //       display: "flex",
-  //       flexDirection: "column",
-  //       alignItems: "center",
-  //       justifyContent: "center",
-  //       background: "rgba(128,128,128, 0.4)",
-  //     }}
-  //   >
-  //     <Box
-  //       sx={{
-  //         paddingBottom: 0.5,
-  //         fontFamily: "Dancing Script",
-  //         fontSize: { xs: 20, md: 24 },
-  //       }}
-  //     >
-  //       Sabías que...?
-  //     </Box>
-  //     <Box
-  //       sx={{
-  //         fontFamily: "roboto",
-  //         fontSize: { xs: 14, md: 16 },
-  //       }}
-  //     >{`${result.name}: ${result.definition}`}</Box>
-  //   </Box>
-  // );
 };
 
 export default DidYouKnow;

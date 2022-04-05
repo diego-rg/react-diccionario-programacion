@@ -15,8 +15,8 @@ const LinkNav = ({ className, href, children }) => {
     <Link
       sx={{
         fontFamily: "Dancing Script",
-        fontSize: { xs: 18, md: 32 },
-        m: { xs: 1, md: 3 },
+        fontSize: { xs: 20, sm: 32 },
+        m: { xs: 1, sm: 3 },
         textDecoration: "none",
         color: "black",
         "&:hover": {
