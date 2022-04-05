@@ -3,7 +3,7 @@ import diccionario from "../api/dictionary";
 
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 import IconButton from "@mui/material/IconButton";
-import { Box, Paper } from "@mui/material";
+import { Typography, Paper } from "@mui/material";
 
 //Componente que hace una request a la Api del diccionario para obtener un término aleatorio y usarlo a modo de "Sabías que...?"
 const DidYouKnow = () => {
@@ -37,7 +37,7 @@ const DidYouKnow = () => {
           md: 15,
         },
         textAlign: "center",
-        maxWidth: { xs: 200, md: 300 },
+        maxWidth: { xs: 250, md: 300 },
         padding: 2,
         display: "flex",
         flexDirection: "column",
@@ -46,16 +46,12 @@ const DidYouKnow = () => {
         background: "rgba(128,128,128, 0.4)",
       }}
     >
-      <Box
-        sx={{
-          paddingBottom: 0.5,
-          fontFamily: "Dancing Script",
-          fontSize: { xs: 20, md: 24 },
-        }}
-      >
+      <Typography variant="h6" component="h6">
         Sabías que...?
-      </Box>
-      <Box>{`${result.name}: ${result.definition}`}</Box>
+      </Typography>
+      <Typography variant="subtitle2" component="p">
+        {`${result.name}: ${result.definition}`}
+      </Typography>
     </Paper>
   );
 };
