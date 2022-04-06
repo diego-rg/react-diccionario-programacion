@@ -59,6 +59,7 @@ const SabiasQue = ({ terms, categories }) => {
 
   return (
     <Container
+    maxWidth="md"
       component="main"
       sx={{
         marginTop: 5,

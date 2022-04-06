@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import diccionario from "../api/dictionary";
 
+import { Typography, Paper } from "@mui/material";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 import IconButton from "@mui/material/IconButton";
-import { Typography, Paper } from "@mui/material";
 
 //Componente que hace una request a la Api del diccionario para obtener un término aleatorio y usarlo a modo de "Sabías que...?"
 const DidYouKnow = () => {

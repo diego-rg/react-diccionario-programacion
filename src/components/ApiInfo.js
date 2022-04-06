@@ -2,8 +2,8 @@ import React from "react";
 import apiText from "../api/apiText";
 
 import { Container, Input } from "@mui/material";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
+import { List, ListItem } from "@mui/material";
+import { Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import CheckIcon from "@mui/icons-material/Check";
@@ -11,20 +11,16 @@ import CheckIcon from "@mui/icons-material/Check";
 const ApiInfo = () => {
   const renderedText = apiText.map((line) => {
     return (
-      <List
-        sx={{
-          width: "100%",
-          paddingBottom: 1,
-        }}
-        key={line.title}
-      >
+      <List key={line.title}>
         <ListItem>
           <CheckIcon
             sx={{
               paddingRight: 1,
             }}
           ></CheckIcon>
-          {line.title}
+          <Typography variant="body1" component="p">
+            {line.title}
+          </Typography>
         </ListItem>
         <ListItem>
           <Input

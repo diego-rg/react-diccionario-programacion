@@ -4,6 +4,7 @@ import CheatsheetGenerator from "./CheatsheetGenerator";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Container, Grid } from "@mui/material";
+import { Typography } from "@mui/material";
 
 //Recibimos terms, categories como props
 const CreateCheatsheet = ({ terms, categories }) => {
@@ -92,6 +93,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
   return (
     <Container
       component="main"
+      maxWidth="md"
       sx={{
         marginTop: 5,
       }}
@@ -126,6 +128,16 @@ const CreateCheatsheet = ({ terms, categories }) => {
       >
         {selectedCategory ? termsByCategory : renderedTerms}
       </Grid>
+      <Typography
+        variant="body1"
+        component="p"
+        sx={{
+          marginTop: 2,
+          textAlign: "center",
+        }}
+      >
+        Haz click en un término para añadirlo a tus apuntes.
+      </Typography>
       <Grid
         container
         spacing={0.5}
@@ -136,9 +148,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
           marginTop: 2,
         }}
       >
-        {!savedTerms.length
-          ? "Haz click en un término para añadirlo a tus apuntes."
-          : renderedSavedTerms}
+        {renderedSavedTerms}
       </Grid>
       <CheatsheetGenerator savedTerms={savedTerms} />
     </Container>

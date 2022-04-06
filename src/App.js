@@ -11,11 +11,11 @@ import ApiInfo from "./components/ApiInfo";
 import "@fontsource/dancing-script";
 import "@fontsource/josefin-sans";
 
-import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
-import IconButton from "@mui/material/IconButton";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Box } from "@mui/material";
 import { responsiveFontSizes } from "@mui/material/styles";
+import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
+import IconButton from "@mui/material/IconButton";
 
 let theme = createTheme({
   components: {
@@ -24,14 +24,6 @@ let theme = createTheme({
         {
           props: {
             variant: "body1",
-          },
-          style: {
-            fontFamily: "Josefin Sans",
-          },
-        },
-        {
-          props: {
-            
           },
           style: {
             fontFamily: "Josefin Sans",
@@ -63,25 +55,17 @@ let theme = createTheme({
         },
       ],
     },
+    MuiInputBase: {
+      styleOverrides: {
+        input: {
+          fontFamily: "Josefin Sans",
+        },
+      },
+    },
   },
 });
 
 theme = responsiveFontSizes(theme);
-
-// const theme = createTheme({
-//   typography: {
-//     fontFamily: "Josefin Sans",
-//     fontSize: 18,
-//   },
-// palette: {
-//   primary: {
-//     main: "#898989",
-//   },
-//   secondary: {
-//     main: "#C5E3EC",
-//   },
-// },
-// });
 
 const App = () => {
   const [loading, setLoading] = useState(true);
