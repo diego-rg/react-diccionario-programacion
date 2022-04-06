@@ -1,5 +1,6 @@
+import dictionary from "./api/dictionary"; //Axios modificado
+
 import React, { useState, useEffect } from "react";
-import dictionary from "./api/dictionary";
 import DidYouKnow from "./components/DidYouKnow";
 import CheckTerms from "./components/CheckTerms";
 import CreateCheatsheet from "./components/CreateCheatsheet";
@@ -7,22 +8,40 @@ import Header from "./components/Header";
 import Route from "./components/Route";
 import Home from "./components/Home";
 import ApiInfo from "./components/ApiInfo";
-import mainTheme from "./themes/mainTheme";
 
 import "@fontsource/dancing-script";
 import "@fontsource/josefin-sans";
 
+import mainTheme from "./themes/mainTheme"; //Archivo para los themes de mui
+
 import { ThemeProvider } from "@mui/material/styles";
-import { Box } from "@mui/material";
+import { Container } from "@mui/material";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 import IconButton from "@mui/material/IconButton";
 
+//Hacemos las requests a la API y las pasamos a los componentes
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); //Controlamos que está aún con la petición para mostrar un componente de "Cargando"
+  const [random, setRandom] = useState([]);
   const [terms, setTerms] = useState([]);
   const [categories, setCategories] = useState([]);
 
-  //fetch all terms
+  //Petición a la API: random term
+  useEffect(() => {
+    const random = async () => {
+      setLoading(true);
+      try {
+        const { data } = await dictionary.get("/terms/random");
+        setRandom(data.random);
+      } catch (error) {
+        console.error(error.message);
+      }
+      setLoading(false);
+    };
+    random();
+  }, []);
+
+  //Petición a la API: all terms
   useEffect(() => {
     const allTerms = async () => {
       setLoading(true);
@@ -37,7 +56,7 @@ const App = () => {
     allTerms();
   }, []);
 
-  //fetch all categs
+  //Petición a la API: all categories
   useEffect(() => {
     const allCategories = async () => {
       setLoading(true);
@@ -52,25 +71,17 @@ const App = () => {
     allCategories();
   }, []);
 
-  //Pasamos os terms e as categories como props
   return loading ? (
     <IconButton color="primary" size="large">
       <HourglassEmptyIcon />
     </IconButton>
   ) : (
     <ThemeProvider theme={mainTheme}>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+      <Container>
         <Header />
         <Route path="/">
           <Home />
-          <DidYouKnow />
+          <DidYouKnow random={random} />
         </Route>
         <Route path="/api">
           <ApiInfo />
@@ -81,7 +92,7 @@ const App = () => {
         <Route path="/cheatsheet">
           <CreateCheatsheet terms={terms} categories={categories} />
         </Route>
-      </Box>
+      </Container>
     </ThemeProvider>
   );
 };
