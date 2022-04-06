@@ -6,3 +6,12 @@ body {
   background-repeat: repeat;
   background-attachment: fixed;
 }
+
+.loading-component {
+  font-family: "Dancing Script";
+  min-height: 100vh;
+  background-image: url("./rainbow-vortex.svg");
+  background-repeat: no-repeat;
+  background-attachment: center;
+  background-size: auto 100%;
+}

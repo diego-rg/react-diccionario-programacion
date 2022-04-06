@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Route from "./components/Route";
 import Home from "./components/Home";
 import ApiInfo from "./components/ApiInfo";
+import Loading from "./components/Loading";
 
 import "@fontsource/dancing-script";
 import "@fontsource/josefin-sans";
@@ -16,8 +17,6 @@ import mainTheme from "./themes/mainTheme"; //Archivo para los themes de mui
 
 import { ThemeProvider } from "@mui/material/styles";
 import { Container } from "@mui/material";
-import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
-import IconButton from "@mui/material/IconButton";
 
 //Hacemos las requests a la API y las pasamos a los componentes
 const App = () => {
@@ -72,12 +71,18 @@ const App = () => {
   }, []);
 
   return loading ? (
-    <IconButton color="primary" size="large">
-      <HourglassEmptyIcon />
-    </IconButton>
+    <Loading />
   ) : (
     <ThemeProvider theme={mainTheme}>
-      <Container>
+      <Container
+        maxWidth="xl"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <Header />
         <Route path="/">
           <Home />

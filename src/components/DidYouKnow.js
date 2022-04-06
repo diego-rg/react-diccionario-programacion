@@ -9,9 +9,6 @@ const DidYouKnow = ({ random }) => {
       elevation={5}
       sx={{
         alignSelf: { md: "flex-end" },
-        marginRight: {
-          md: 15,
-        },
         textAlign: "center",
         maxWidth: { xs: 250, md: 300 },
         padding: 2,
