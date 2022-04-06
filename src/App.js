@@ -7,65 +7,15 @@ import Header from "./components/Header";
 import Route from "./components/Route";
 import Home from "./components/Home";
 import ApiInfo from "./components/ApiInfo";
+import mainTheme from "./themes/mainTheme";
 
 import "@fontsource/dancing-script";
 import "@fontsource/josefin-sans";
 
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import { Box } from "@mui/material";
-import { responsiveFontSizes } from "@mui/material/styles";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 import IconButton from "@mui/material/IconButton";
-
-let theme = createTheme({
-  components: {
-    MuiTypography: {
-      variants: [
-        {
-          props: {
-            variant: "body1",
-          },
-          style: {
-            fontFamily: "Josefin Sans",
-          },
-        },
-        {
-          props: {
-            variant: "subtitle2",
-          },
-          style: {
-            fontFamily: "Josefin Sans",
-          },
-        },
-        {
-          props: {
-            variant: "h5",
-          },
-          style: {
-            fontFamily: "Dancing Script",
-          },
-        },
-        {
-          props: {
-            variant: "h6",
-          },
-          style: {
-            fontFamily: "Dancing Script",
-          },
-        },
-      ],
-    },
-    MuiInputBase: {
-      styleOverrides: {
-        input: {
-          fontFamily: "Josefin Sans",
-        },
-      },
-    },
-  },
-});
-
-theme = responsiveFontSizes(theme);
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -108,7 +58,7 @@ const App = () => {
       <HourglassEmptyIcon />
     </IconButton>
   ) : (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={mainTheme}>
       <Box
         sx={{
           display: "flex",
