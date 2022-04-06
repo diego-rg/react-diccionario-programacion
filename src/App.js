@@ -8,25 +8,80 @@ import Route from "./components/Route";
 import Home from "./components/Home";
 import ApiInfo from "./components/ApiInfo";
 
+import "@fontsource/dancing-script";
+import "@fontsource/josefin-sans";
+
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 import IconButton from "@mui/material/IconButton";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Box } from "@mui/material";
+import { responsiveFontSizes } from "@mui/material/styles";
 
-const theme = createTheme({
-  typography: {
-    fontFamily: "Josefin Sans",
-    fontSize: 18,
+let theme = createTheme({
+  components: {
+    MuiTypography: {
+      variants: [
+        {
+          props: {
+            variant: "body1",
+          },
+          style: {
+            fontFamily: "Josefin Sans",
+          },
+        },
+        {
+          props: {
+            
+          },
+          style: {
+            fontFamily: "Josefin Sans",
+          },
+        },
+        {
+          props: {
+            variant: "subtitle2",
+          },
+          style: {
+            fontFamily: "Josefin Sans",
+          },
+        },
+        {
+          props: {
+            variant: "h5",
+          },
+          style: {
+            fontFamily: "Dancing Script",
+          },
+        },
+        {
+          props: {
+            variant: "h6",
+          },
+          style: {
+            fontFamily: "Dancing Script",
+          },
+        },
+      ],
+    },
   },
-  // palette: {
-  //   primary: {
-  //     main: "#898989",
-  //   },
-  //   secondary: {
-  //     main: "#C5E3EC",
-  //   },
-  // },
 });
+
+theme = responsiveFontSizes(theme);
+
+// const theme = createTheme({
+//   typography: {
+//     fontFamily: "Josefin Sans",
+//     fontSize: 18,
+//   },
+// palette: {
+//   primary: {
+//     main: "#898989",
+//   },
+//   secondary: {
+//     main: "#C5E3EC",
+//   },
+// },
+// });
 
 const App = () => {
   const [loading, setLoading] = useState(true);

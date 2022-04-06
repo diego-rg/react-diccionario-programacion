@@ -1,7 +1,6 @@
 import React from "react";
 
-import Link from "@mui/material/Link";
-import "@fontsource/dancing-script";
+import Typography from "@mui/material/Link";
 
 const LinkNav = ({ className, href, children }) => {
   const onClick = (event) => {
@@ -12,10 +11,10 @@ const LinkNav = ({ className, href, children }) => {
   };
 
   return (
-    <Link
+    <Typography
+      variant="h5"
+      component="a"
       sx={{
-        fontFamily: "Dancing Script",
-        fontSize: { xs: 20, sm: 32 },
         m: { xs: 1, sm: 3 },
         textDecoration: "none",
         color: "black",
@@ -28,7 +27,7 @@ const LinkNav = ({ className, href, children }) => {
       href={href}
     >
       {children}
-    </Link>
+    </Typography>
   );
 };
 

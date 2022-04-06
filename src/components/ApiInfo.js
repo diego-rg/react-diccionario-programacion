@@ -20,36 +20,20 @@ const ApiInfo = () => {
       >
         <ListItem>
           <CheckIcon
-            fontSize="small"
             sx={{
               paddingRight: 1,
             }}
           ></CheckIcon>
           {line.title}
         </ListItem>
-        <ListItem
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
+        <ListItem>
           <Input
-            sx={
-              {
-                // "&:hover": {
-                //   textDecoration: "none",
-                //   cursor: "default!important",
-                // },
-              }
-            }
             fullWidth
             readOnly
             type="text"
             id={line.title}
             value={line.description}
           ></Input>
-
           <IconButton
             aria-label="copy"
             size="small"
@@ -71,16 +55,10 @@ const ApiInfo = () => {
       maxWidth={"md"}
       component="main"
       sx={{
-        fontFamily: "Josefin Sans",
-        fontSize: 18,
         background: "RGB(234,234,234, 0.5)",
         padding: 2,
         boxShadow: 3,
         borderRadius: "12px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
         marginTop: 5,
       }}
     >
