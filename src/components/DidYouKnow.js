@@ -6,6 +6,7 @@ import { Typography, Paper } from "@mui/material";
 const DidYouKnow = ({ random }) => {
   return (
     <Paper
+      component="aside"
       elevation={5}
       sx={{
         textAlign: "center",

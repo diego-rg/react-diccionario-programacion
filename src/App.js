@@ -5,6 +5,7 @@ import DidYouKnow from "./components/DidYouKnow";
 import CheckTerms from "./components/CheckTerms";
 import CreateCheatsheet from "./components/CreateCheatsheet";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Route from "./components/Route";
 import Home from "./components/Home";
 import ApiInfo from "./components/ApiInfo";
@@ -82,8 +83,7 @@ const App = () => {
           borderRadius: { xs: "0", sm: "50px" },
           border: { xs: "none", sm: "2px solid #ffab00" },
           boxShadow: { sm: 3 },
-          paddingBottom: { xs: 4, sm: 0 },
-          paddingX: { xs: 0, md: 8 },
+          paddingX: { xs: 0, md: 6 },
         }}
       >
         <Header />
@@ -100,6 +100,7 @@ const App = () => {
         <Route path="/cheatsheet">
           <CreateCheatsheet terms={terms} categories={categories} />
         </Route>
+        <Footer />
       </Container>
     </ThemeProvider>
   );

@@ -5,6 +5,7 @@ import { Box, Typography } from "@mui/material";
 const Home = () => {
   return (
     <Box
+      component="main"
       sx={{
         padding: 2,
       }}

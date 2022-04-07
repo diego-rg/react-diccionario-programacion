@@ -18,7 +18,7 @@ let mainTheme = createTheme({
           },
           style: {
             fontFamily: "Josefin Sans",
-            fontSize: "1.2rem",
+            fontSize: "1.1rem",
           },
         },
         {
@@ -51,7 +51,7 @@ let mainTheme = createTheme({
       styleOverrides: {
         input: {
           fontFamily: "Josefin Sans",
-          fontSize: "1.2rem",
+          fontSize: "1.1rem",
         },
       },
     },
