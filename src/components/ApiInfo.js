@@ -48,7 +48,7 @@ const ApiInfo = () => {
 
   return (
     <Container
-      maxWidth={"md"}
+      maxWidth={"lg"}
       component="main"
       sx={{
         background: "RGB(234,234,234, 0.5)",

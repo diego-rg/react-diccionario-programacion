@@ -9,8 +9,8 @@ const Header = () => {
     <AppBar
       position="static"
       sx={{
-        marginTop: {
-          md: 4,
+        paddingY: {
+          md: 6,
         },
         display: "flex",
         flexDirection: "row",

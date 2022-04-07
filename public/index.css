@@ -1,17 +1,8 @@
 body {
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  background-color: #efefef;
-  background-image: url("./pattern-squares.svg");
-  background-repeat: repeat;
-  background-attachment: fixed;
-}
-
-.loading-component {
-  font-family: "Dancing Script";
-  min-height: 100vh;
-  background-image: url("./rainbow-vortex.svg");
-  background-repeat: no-repeat;
-  background-attachment: center;
-  background-size: auto 100%;
+  background-color: #3c329a;
 }

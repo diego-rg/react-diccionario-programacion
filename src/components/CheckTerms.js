@@ -14,11 +14,7 @@ const SabiasQue = ({ terms, categories }) => {
   const renderedTerms = terms.map((term) => {
     return (
       <Grid item key={term._id}>
-        <Button
-          size="small"
-          variant="outlined"
-          onClick={() => setSelectedTerm(term)}
-        >
+        <Button variant="outlined" onClick={() => setSelectedTerm(term)}>
           {term.name}
         </Button>
       </Grid>
@@ -30,7 +26,6 @@ const SabiasQue = ({ terms, categories }) => {
     return (
       <Grid item key={category}>
         <Button
-          size="small"
           variant="contained"
           onClick={() => setSelectedCategory(category)}
         >
@@ -46,11 +41,7 @@ const SabiasQue = ({ terms, categories }) => {
     .map((term) => {
       return (
         <Grid item key={term._id}>
-          <Button
-            size="small"
-            variant="outlined"
-            onClick={() => setSelectedTerm(term)}
-          >
+          <Button variant="outlined" onClick={() => setSelectedTerm(term)}>
             {term.name}
           </Button>
         </Grid>
@@ -59,7 +50,7 @@ const SabiasQue = ({ terms, categories }) => {
 
   return (
     <Container
-    maxWidth="md"
+      maxWidth="lg"
       component="main"
       sx={{
         marginTop: 5,
@@ -73,11 +64,7 @@ const SabiasQue = ({ terms, categories }) => {
         alignItems="center"
       >
         <Grid item key="todos">
-          <Button
-            size="small"
-            variant="contained"
-            onClick={() => setSelectedCategory(null)}
-          >
+          <Button variant="contained" onClick={() => setSelectedCategory(null)}>
             Todos
           </Button>
         </Grid>

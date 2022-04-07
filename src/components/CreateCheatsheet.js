@@ -35,7 +35,6 @@ const CreateCheatsheet = ({ terms, categories }) => {
             alignItems: "center",
             justifyContent: "center",
           }}
-          size="small"
           variant="outlined"
           color="error"
           endIcon={<DeleteIcon />}
@@ -51,7 +50,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
   const renderedTerms = terms.map((term) => {
     return (
       <Grid item key={term._id}>
-        <Button size="small" variant="outlined" onClick={() => saveTerm(term)}>
+        <Button variant="outlined" onClick={() => saveTerm(term)}>
           {term.name}
         </Button>
       </Grid>
@@ -63,7 +62,6 @@ const CreateCheatsheet = ({ terms, categories }) => {
     return (
       <Grid item key={category}>
         <Button
-          size="small"
           variant="contained"
           onClick={() => setSelectedCategory(category)}
         >
@@ -79,11 +77,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
     .map((term) => {
       return (
         <Grid item key={term._id}>
-          <Button
-            size="small"
-            variant="outlined"
-            onClick={() => saveTerm(term)}
-          >
+          <Button variant="outlined" onClick={() => saveTerm(term)}>
             {term.name}
           </Button>
         </Grid>
@@ -93,7 +87,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
   return (
     <Container
       component="main"
-      maxWidth="md"
+      maxWidth="lg"
       sx={{
         marginTop: 5,
       }}
@@ -106,11 +100,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
         alignItems="center"
       >
         <Grid item key="todos">
-          <Button
-            size="small"
-            variant="contained"
-            onClick={() => setSelectedCategory(null)}
-          >
+          <Button variant="contained" onClick={() => setSelectedCategory(null)}>
             Todos
           </Button>
         </Grid>

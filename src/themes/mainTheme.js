@@ -1,6 +1,14 @@
 import { responsiveFontSizes, createTheme } from "@mui/material/styles";
 
 let mainTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#5e51f8",
+    },
+    secondary: {
+      main: "#ffab00",
+    },
+  },
   components: {
     MuiTypography: {
       variants: [
