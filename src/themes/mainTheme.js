@@ -6,7 +6,7 @@ let mainTheme = createTheme({
       main: "#5e51f8",
     },
     secondary: {
-      main: "#ffab00",
+      main: "#3a14ad",
     },
   },
   components: {
@@ -18,6 +18,7 @@ let mainTheme = createTheme({
           },
           style: {
             fontFamily: "Josefin Sans",
+            fontSize: "1.2rem",
           },
         },
         {
@@ -50,6 +51,7 @@ let mainTheme = createTheme({
       styleOverrides: {
         input: {
           fontFamily: "Josefin Sans",
+          fontSize: "1.2rem",
         },
       },
     },

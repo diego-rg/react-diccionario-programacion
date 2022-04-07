@@ -12,7 +12,7 @@ const ApiInfo = () => {
   const renderedText = apiText.map((line) => {
     return (
       <Grid container spacing={1} key={line.title}>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={4} sx={{ marginY: 2 }}>
           <Box sx={{ display: "flex" }}>
             <CheckIcon
               sx={{
@@ -24,7 +24,7 @@ const ApiInfo = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={8}>
+        <Grid item xs={12} sm={8} sx={{ marginY: 2 }}>
           <Box sx={{ display: "flex" }}>
             <Input
               fullWidth
@@ -55,7 +55,7 @@ const ApiInfo = () => {
       maxWidth={"lg"}
       component="main"
       sx={{
-        background: "RGB(234,234,234, 0.5)",
+        background: "RGB(234,234,234, 0.4)",
         padding: 2,
         boxShadow: 3,
         borderRadius: "12px",

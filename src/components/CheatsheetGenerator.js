@@ -96,7 +96,7 @@ const CheatsheetGenerator = ({ savedTerms }) => {
         }}
         size="large"
         variant="contained"
-        color="success"
+        color="secondary"
         startIcon={<SaveIcon />}
         onClick={generateCheatsheet}
       >
