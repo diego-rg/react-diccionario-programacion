@@ -18,7 +18,7 @@ const ApiInfo = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item xs={12} sm={4} sx={{ marginY: 2 }}>
+        <Grid item xs={12} sm={4} sx={{ marginY: { xs: 0, sm: 2 } }}>
           <Box sx={{ display: "flex" }}>
             <CheckIcon
               sx={{
@@ -30,7 +30,7 @@ const ApiInfo = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={8} sx={{ marginY: 2 }}>
+        <Grid item xs={12} sm={8} sx={{ marginBottom: { xs: 3, sm: 0 } }}>
           <Box sx={{ display: "flex" }}>
             <Input
               fullWidth
@@ -60,7 +60,7 @@ const ApiInfo = () => {
     <Box
       component="main"
       sx={{
-        background: "RGB(234,234,234, 0.4)",
+        background: "RGB(255,171,0, 0.2)",
         padding: 2,
         boxShadow: 3,
         borderRadius: "12px",

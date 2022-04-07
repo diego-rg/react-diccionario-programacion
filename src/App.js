@@ -82,6 +82,7 @@ const App = () => {
           borderRadius: { xs: "0", sm: "50px" },
           border: { xs: "none", sm: "2px solid #ffab00" },
           boxShadow: { sm: 3 },
+          paddingBottom: { xs: 4, sm: 0 },
         }}
       >
         <Header />
