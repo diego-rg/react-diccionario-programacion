@@ -82,7 +82,7 @@ const CheatsheetGenerator = ({ savedTerms }) => {
   return (
     <Box
       sx={{
-        margin: 3,
+        margin: 4,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -94,6 +94,7 @@ const CheatsheetGenerator = ({ savedTerms }) => {
           alignItems: "center",
           justifyContent: "center",
         }}
+        size="large"
         variant="contained"
         color="success"
         startIcon={<SaveIcon />}

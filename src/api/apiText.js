@@ -15,7 +15,7 @@ const apiText = [
       "https://api-diccionarioprogramacion.herokuapp.com/api/terms/categories",
   },
   {
-    title: "Todos los términos de una categoría:",
+    title: "Términos de una categoría:",
     description:
       "https://api-diccionarioprogramacion.herokuapp.com/api/terms/{category}",
   },

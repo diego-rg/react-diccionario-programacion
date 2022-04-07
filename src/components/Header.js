@@ -10,7 +10,7 @@ const Header = () => {
       position="static"
       sx={{
         paddingY: {
-          md: 6,
+          md: 4,
         },
         display: "flex",
         flexDirection: "row",

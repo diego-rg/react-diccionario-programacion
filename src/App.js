@@ -16,7 +16,7 @@ import "@fontsource/josefin-sans";
 import mainTheme from "./themes/mainTheme"; //Archivo para los themes de mui
 
 import { ThemeProvider } from "@mui/material/styles";
-import { Grid, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
 
 //Hacemos las requests a la API y las pasamos a los componentes
 const App = () => {

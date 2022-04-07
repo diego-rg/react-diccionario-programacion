@@ -14,7 +14,11 @@ const SabiasQue = ({ terms, categories }) => {
   const renderedTerms = terms.map((term) => {
     return (
       <Grid item key={term._id}>
-        <Button variant="outlined" onClick={() => setSelectedTerm(term)}>
+        <Button
+          size="large"
+          variant="outlined"
+          onClick={() => setSelectedTerm(term)}
+        >
           {term.name}
         </Button>
       </Grid>
@@ -26,6 +30,7 @@ const SabiasQue = ({ terms, categories }) => {
     return (
       <Grid item key={category}>
         <Button
+          size="large"
           variant="contained"
           onClick={() => setSelectedCategory(category)}
         >
@@ -41,7 +46,11 @@ const SabiasQue = ({ terms, categories }) => {
     .map((term) => {
       return (
         <Grid item key={term._id}>
-          <Button variant="outlined" onClick={() => setSelectedTerm(term)}>
+          <Button
+            size="large"
+            variant="outlined"
+            onClick={() => setSelectedTerm(term)}
+          >
             {term.name}
           </Button>
         </Grid>
@@ -64,7 +73,11 @@ const SabiasQue = ({ terms, categories }) => {
         alignItems="center"
       >
         <Grid item key="todos">
-          <Button variant="contained" onClick={() => setSelectedCategory(null)}>
+          <Button
+            size="large"
+            variant="contained"
+            onClick={() => setSelectedCategory(null)}
+          >
             Todos
           </Button>
         </Grid>
@@ -77,7 +90,7 @@ const SabiasQue = ({ terms, categories }) => {
         justifyContent="center"
         alignItems="center"
         sx={{
-          marginTop: 2,
+          marginTop: 4,
         }}
       >
         {selectedCategory ? termsByCategory : renderedTerms}
@@ -86,11 +99,12 @@ const SabiasQue = ({ terms, categories }) => {
         multiline
         fullWidth
         sx={{
-          marginTop: 2,
+          marginTop: 4,
         }}
         InputProps={{
           readOnly: true,
         }}
+        size="large"
         variant="outlined"
         name="definitions"
         id="definitions"

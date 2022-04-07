@@ -35,6 +35,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
             alignItems: "center",
             justifyContent: "center",
           }}
+          size="large"
           variant="outlined"
           color="error"
           endIcon={<DeleteIcon />}
@@ -50,7 +51,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
   const renderedTerms = terms.map((term) => {
     return (
       <Grid item key={term._id}>
-        <Button variant="outlined" onClick={() => saveTerm(term)}>
+        <Button size="large" variant="outlined" onClick={() => saveTerm(term)}>
           {term.name}
         </Button>
       </Grid>
@@ -62,6 +63,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
     return (
       <Grid item key={category}>
         <Button
+          size="large"
           variant="contained"
           onClick={() => setSelectedCategory(category)}
         >
@@ -77,7 +79,11 @@ const CreateCheatsheet = ({ terms, categories }) => {
     .map((term) => {
       return (
         <Grid item key={term._id}>
-          <Button variant="outlined" onClick={() => saveTerm(term)}>
+          <Button
+            size="large"
+            variant="outlined"
+            onClick={() => saveTerm(term)}
+          >
             {term.name}
           </Button>
         </Grid>
@@ -100,7 +106,11 @@ const CreateCheatsheet = ({ terms, categories }) => {
         alignItems="center"
       >
         <Grid item key="todos">
-          <Button variant="contained" onClick={() => setSelectedCategory(null)}>
+          <Button
+            size="large"
+            variant="contained"
+            onClick={() => setSelectedCategory(null)}
+          >
             Todos
           </Button>
         </Grid>
@@ -113,16 +123,17 @@ const CreateCheatsheet = ({ terms, categories }) => {
         justifyContent="center"
         alignItems="center"
         sx={{
-          marginTop: 2,
+          marginTop: 4,
         }}
       >
         {selectedCategory ? termsByCategory : renderedTerms}
       </Grid>
       <Typography
+        size="large"
         variant="body1"
         component="p"
         sx={{
-          marginTop: 2,
+          marginTop: 4,
           textAlign: "center",
         }}
       >
@@ -135,7 +146,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
         justifyContent="center"
         alignItems="center"
         sx={{
-          marginTop: 2,
+          marginTop: 4,
         }}
       >
         {renderedSavedTerms}
