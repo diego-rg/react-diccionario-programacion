@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { Grid, Container } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 
 //Componente que hace una request a la Api del diccionario para obtener todos los términos y ver su definición al hacer click en ellos
 //Recibimos terms, categories como props
@@ -15,7 +15,12 @@ const SabiasQue = ({ terms, categories }) => {
     return (
       <Grid item key={term._id}>
         <Button
-          size="large"
+          sx={{
+            fontSize: {
+              xs: "0.8rem",
+              sm: "1rem",
+            },
+          }}
           variant="outlined"
           onClick={() => setSelectedTerm(term)}
         >
@@ -30,7 +35,12 @@ const SabiasQue = ({ terms, categories }) => {
     return (
       <Grid item key={category}>
         <Button
-          size="large"
+          sx={{
+            fontSize: {
+              xs: "0.8rem",
+              sm: "1rem",
+            },
+          }}
           variant="contained"
           onClick={() => setSelectedCategory(category)}
         >
@@ -47,7 +57,12 @@ const SabiasQue = ({ terms, categories }) => {
       return (
         <Grid item key={term._id}>
           <Button
-            size="large"
+            sx={{
+              fontSize: {
+                xs: "0.8rem",
+                sm: "1rem",
+              },
+            }}
             variant="outlined"
             onClick={() => setSelectedTerm(term)}
           >
@@ -58,7 +73,7 @@ const SabiasQue = ({ terms, categories }) => {
     });
 
   return (
-    <Container
+    <Box
       maxWidth="lg"
       component="main"
       sx={{
@@ -74,7 +89,12 @@ const SabiasQue = ({ terms, categories }) => {
       >
         <Grid item key="todos">
           <Button
-            size="large"
+            sx={{
+              fontSize: {
+                xs: "0.8rem",
+                sm: "1rem",
+              },
+            }}
             variant="contained"
             onClick={() => setSelectedCategory(null)}
           >
@@ -104,7 +124,6 @@ const SabiasQue = ({ terms, categories }) => {
         InputProps={{
           readOnly: true,
         }}
-        size="large"
         variant="outlined"
         name="definitions"
         id="definitions"
@@ -115,7 +134,7 @@ const SabiasQue = ({ terms, categories }) => {
         }
         onChange={(e) => setSelectedTerm(e.target.value)}
       ></TextField>
-    </Container>
+    </Box>
   );
 };
 

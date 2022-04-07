@@ -3,7 +3,7 @@ import CheatsheetGenerator from "./CheatsheetGenerator";
 
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { Container, Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { Typography } from "@mui/material";
 
 //Recibimos terms, categories como props
@@ -31,11 +31,14 @@ const CreateCheatsheet = ({ terms, categories }) => {
       <Grid item key={term._id}>
         <Button
           sx={{
+            fontSize: {
+              xs: "0.8rem",
+              sm: "1rem",
+            },
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
           }}
-          size="large"
           variant="outlined"
           color="error"
           endIcon={<DeleteIcon />}
@@ -51,7 +54,16 @@ const CreateCheatsheet = ({ terms, categories }) => {
   const renderedTerms = terms.map((term) => {
     return (
       <Grid item key={term._id}>
-        <Button size="large" variant="outlined" onClick={() => saveTerm(term)}>
+        <Button
+          sx={{
+            fontSize: {
+              xs: "0.8rem",
+              sm: "1rem",
+            },
+          }}
+          variant="outlined"
+          onClick={() => saveTerm(term)}
+        >
           {term.name}
         </Button>
       </Grid>
@@ -63,7 +75,12 @@ const CreateCheatsheet = ({ terms, categories }) => {
     return (
       <Grid item key={category}>
         <Button
-          size="large"
+          sx={{
+            fontSize: {
+              xs: "0.8rem",
+              sm: "1rem",
+            },
+          }}
           variant="contained"
           onClick={() => setSelectedCategory(category)}
         >
@@ -80,7 +97,12 @@ const CreateCheatsheet = ({ terms, categories }) => {
       return (
         <Grid item key={term._id}>
           <Button
-            size="large"
+            sx={{
+              fontSize: {
+                xs: "0.8rem",
+                sm: "1rem",
+              },
+            }}
             variant="outlined"
             onClick={() => saveTerm(term)}
           >
@@ -91,7 +113,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
     });
 
   return (
-    <Container
+    <Box
       component="main"
       maxWidth="lg"
       sx={{
@@ -107,7 +129,12 @@ const CreateCheatsheet = ({ terms, categories }) => {
       >
         <Grid item key="todos">
           <Button
-            size="large"
+            sx={{
+              fontSize: {
+                xs: "0.8rem",
+                sm: "1rem",
+              },
+            }}
             variant="contained"
             onClick={() => setSelectedCategory(null)}
           >
@@ -129,7 +156,6 @@ const CreateCheatsheet = ({ terms, categories }) => {
         {selectedCategory ? termsByCategory : renderedTerms}
       </Grid>
       <Typography
-        size="large"
         variant="body1"
         component="p"
         sx={{
@@ -152,7 +178,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
         {renderedSavedTerms}
       </Grid>
       <CheatsheetGenerator savedTerms={savedTerms} />
-    </Container>
+    </Box>
   );
 };
 

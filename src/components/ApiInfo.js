@@ -1,7 +1,7 @@
 import React from "react";
 import apiText from "../api/apiText";
 
-import { Container, Input } from "@mui/material";
+import { Input } from "@mui/material";
 import { Grid, Box } from "@mui/material";
 import { Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
@@ -11,7 +11,13 @@ import CheckIcon from "@mui/icons-material/Check";
 const ApiInfo = () => {
   const renderedText = apiText.map((line) => {
     return (
-      <Grid container spacing={1} key={line.title}>
+      <Grid
+        container
+        spacing={1}
+        key={line.title}
+        justifyContent="center"
+        alignItems="center"
+      >
         <Grid item xs={12} sm={4} sx={{ marginY: 2 }}>
           <Box sx={{ display: "flex" }}>
             <CheckIcon
@@ -51,8 +57,7 @@ const ApiInfo = () => {
   });
 
   return (
-    <Container
-      maxWidth={"lg"}
+    <Box
       component="main"
       sx={{
         background: "RGB(234,234,234, 0.4)",
@@ -64,7 +69,7 @@ const ApiInfo = () => {
       }}
     >
       {renderedText}
-    </Container>
+    </Box>
   );
 };
 

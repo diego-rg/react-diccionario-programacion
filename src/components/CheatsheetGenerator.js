@@ -1,5 +1,7 @@
 import React from "react";
+
 import { Document, Packer, Paragraph, TextRun, Header, Footer } from "docx";
+
 import { saveAs } from "file-saver";
 import Button from "@mui/material/Button";
 import SaveIcon from "@mui/icons-material/Save";
@@ -90,9 +92,14 @@ const CheatsheetGenerator = ({ savedTerms }) => {
     >
       <Button
         sx={{
+          marginY: 2,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          fontSize: {
+            xs: "0.8rem",
+            sm: "1.05rem",
+          },
         }}
         size="large"
         variant="contained"
