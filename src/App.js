@@ -16,7 +16,7 @@ import "@fontsource/josefin-sans";
 import mainTheme from "./themes/mainTheme"; //Archivo para los themes de mui
 
 import { ThemeProvider } from "@mui/material/styles";
-import { Paper } from "@mui/material";
+import { Container } from "@mui/material";
 
 //Hacemos las requests a la API y las pasamos a los componentes
 const App = () => {
@@ -74,13 +74,14 @@ const App = () => {
     <Loading />
   ) : (
     <ThemeProvider theme={mainTheme}>
-      <Paper
-        elevation={24}
+      <Container
         sx={{
           backgroundColor: "#ffffff",
-          minHeight: "75vh",
-          width: "75vw",
-          borderRadius: "50px",
+          minHeight: { xs: "100vh", sm: "75vh" },
+          width: { xs: "100vw", sm: "75vw" },
+          borderRadius: { xs: "0", sm: "50px" },
+          border: { xs: "none", sm: "2px solid #ffab00" },
+          boxShadow: { sm: 3 },
         }}
       >
         <Header />
@@ -97,7 +98,7 @@ const App = () => {
         <Route path="/cheatsheet">
           <CreateCheatsheet terms={terms} categories={categories} />
         </Route>
-      </Paper>
+      </Container>
     </ThemeProvider>
   );
 };

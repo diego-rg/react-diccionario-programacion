@@ -60,6 +60,7 @@ const ApiInfo = () => {
         boxShadow: 3,
         borderRadius: "12px",
         marginTop: 5,
+        marginX: 2,
       }}
     >
       {renderedText}
