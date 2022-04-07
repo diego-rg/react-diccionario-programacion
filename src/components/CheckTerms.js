@@ -78,7 +78,7 @@ const SabiasQue = ({ terms, categories }) => {
       component="main"
       sx={{
         padding: 2,
-        marginTop: 5,
+        marginTop: 2,
       }}
     >
       <Grid

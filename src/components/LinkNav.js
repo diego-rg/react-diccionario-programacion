@@ -17,9 +17,9 @@ const LinkNav = ({ className, href, children }) => {
       sx={{
         m: { xs: 1, sm: 3 },
         textDecoration: "none",
-        color: { xs: "white", sm: "black" },
+        color: { xs: "white", sm: "secondary.main" },
         "&:hover": {
-          color: { xs: "#ffab00", sm: "primary.main" },
+          color: { xs: "black", sm: "primary.main" },
         },
       }}
       onClick={onClick}

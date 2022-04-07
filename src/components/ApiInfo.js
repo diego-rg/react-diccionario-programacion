@@ -64,7 +64,7 @@ const ApiInfo = () => {
         padding: 2,
         boxShadow: 3,
         borderRadius: "12px",
-        marginTop: 5,
+        marginY: 2,
         marginX: 2,
       }}
     >

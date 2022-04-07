@@ -17,7 +17,7 @@ import "@fontsource/josefin-sans";
 import mainTheme from "./themes/mainTheme"; //Archivo para los themes de mui
 
 import { ThemeProvider } from "@mui/material/styles";
-import { Container } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 
 //Hacemos las requests a la API y las pasamos a los componentes
 const App = () => {
@@ -77,6 +77,8 @@ const App = () => {
     <ThemeProvider theme={mainTheme}>
       <Container
         sx={{
+          display: "flex",
+          justifyContent: "center",
           backgroundColor: "#ffffff",
           minHeight: { xs: "100vh", sm: "75vh" },
           width: { xs: "100vw", sm: "75vw" },
@@ -86,21 +88,27 @@ const App = () => {
           paddingX: { xs: 0, md: 6 },
         }}
       >
-        <Header />
-        <Route path="/">
-          <Home />
-          <DidYouKnow random={random} />
-        </Route>
-        <Route path="/api">
-          <ApiInfo />
-        </Route>
-        <Route path="/dictionary">
-          <CheckTerms terms={terms} categories={categories} />
-        </Route>
-        <Route path="/cheatsheet">
-          <CreateCheatsheet terms={terms} categories={categories} />
-        </Route>
-        <Footer />
+        <Grid container>
+          <Grid item xs={12}>
+            <Header />
+            <Route path="/">
+              <Home />
+              <DidYouKnow random={random} />
+            </Route>
+            <Route path="/api">
+              <ApiInfo />
+            </Route>
+            <Route path="/dictionary">
+              <CheckTerms terms={terms} categories={categories} />
+            </Route>
+            <Route path="/cheatsheet">
+              <CreateCheatsheet terms={terms} categories={categories} />
+            </Route>
+          </Grid>
+          <Grid item xs={12} sx={{ alignSelf: "flex-end" }}>
+            <Footer />
+          </Grid>
+        </Grid>
       </Container>
     </ThemeProvider>
   );

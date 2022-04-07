@@ -8,14 +8,14 @@ const Footer = () => {
       component="footer"
       sx={{
         background: { xs: "#3a14ad", sm: "transparent" },
-        padding: 2,
+        padding: { xs: 2, sm: 4 },
       }}
     >
       <Typography
         variant="body1"
         component="p"
         sx={{
-          color: { xs: "white", sm: "black" },
+          color: { xs: "white", sm: "secondary.main" },
           textAlign: "center",
         }}
       >
@@ -23,9 +23,9 @@ const Footer = () => {
         <Link
           sx={{
             textDecoration: "none",
-            color: { xs: "white", sm: "black" },
+            color: { xs: "white", sm: "secondary.main" },
             "&:hover": {
-              color: { xs: "#ffab00", sm: "primary.main" },
+              color: { xs: "black", sm: "primary.main" },
             },
           }}
           href="https://github.com/diego-rg"

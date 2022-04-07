@@ -118,7 +118,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
       maxWidth="lg"
       sx={{
         padding: 2,
-        marginTop: 5,
+        marginTop: 2,
       }}
     >
       <Grid
