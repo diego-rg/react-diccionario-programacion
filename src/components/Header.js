@@ -10,13 +10,14 @@ const Header = () => {
       position="static"
       sx={{
         paddingY: {
-          md: 4,
+          xs: 2,
+          sm: 4,
         },
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
-        background: "transparent",
+        background: { xs: "#3a14ad", sm: "transparent" },
         boxShadow: "none",
       }}
     >

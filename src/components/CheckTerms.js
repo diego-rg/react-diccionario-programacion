@@ -77,6 +77,7 @@ const SabiasQue = ({ terms, categories }) => {
       maxWidth="lg"
       component="main"
       sx={{
+        padding: 2,
         marginTop: 5,
       }}
     >

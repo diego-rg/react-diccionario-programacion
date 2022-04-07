@@ -8,7 +8,6 @@ const DidYouKnow = ({ random }) => {
     <Paper
       elevation={5}
       sx={{
-        alignSelf: { md: "flex-end" },
         textAlign: "center",
         maxWidth: { xs: 250, md: 300 },
         padding: 2,

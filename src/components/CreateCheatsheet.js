@@ -117,6 +117,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
       component="main"
       maxWidth="lg"
       sx={{
+        padding: 2,
         marginTop: 5,
       }}
     >
