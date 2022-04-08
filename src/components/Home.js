@@ -13,7 +13,8 @@ const Home = () => {
       }}
     >
       <Typography variant="body1" component="p">
-        Home
+        Consulta el diccionario de programación, crea tus propios apuntes en
+        formato doc o consume nuestra API en tus proyectos.
       </Typography>
     </Box>
   );
