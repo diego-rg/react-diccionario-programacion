@@ -14,7 +14,7 @@ const Home = () => {
     >
       <Typography variant="body1" component="p">
         Consulta el diccionario de programación, crea tus propios apuntes en
-        formato doc o consume nuestra API en tus proyectos.
+        formato doc o consume nuestra API REST en tus proyectos.
       </Typography>
     </Box>
   );

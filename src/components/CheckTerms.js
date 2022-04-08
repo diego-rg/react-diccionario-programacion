@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { Grid, Box } from "@mui/material";
+import { Grid, Box, Typography } from "@mui/material";
 
 //Componente que hace una request a la Api del diccionario para obtener todos los términos y ver su definición al hacer click en ellos
 //Recibimos terms, categories como props
@@ -81,6 +81,17 @@ const SabiasQue = ({ terms, categories }) => {
         marginTop: 2,
       }}
     >
+      <Typography
+        variant="body1"
+        component="p"
+        sx={{
+          paddingBottom: 4,
+          textAlign: "center",
+        }}
+      >
+        Busca los términos haciendo click en su categoría y luego haz click en
+        el término para ver su definición.
+      </Typography>
       <Grid
         container
         spacing={0.5}

@@ -121,6 +121,17 @@ const CreateCheatsheet = ({ terms, categories }) => {
         marginTop: 2,
       }}
     >
+      <Typography
+        variant="body1"
+        component="p"
+        sx={{
+          paddingBottom: 4,
+          textAlign: "center",
+        }}
+      >
+        Haz click en un término para agregarlo a tus apuntes. Puedes
+        descargarlos en formato doc cuando finalices.
+      </Typography>
       <Grid
         container
         spacing={0.5}
@@ -164,7 +175,8 @@ const CreateCheatsheet = ({ terms, categories }) => {
           textAlign: "center",
         }}
       >
-        Haz click en un término para añadirlo a tus apuntes.
+        Aquí podrás ver los términos que has seleccionado. Haz click en ellos
+        para eliminarlos.
       </Typography>
       <Grid
         container
