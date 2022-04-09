@@ -80,11 +80,8 @@ const App = () => {
           display: "flex",
           justifyContent: "center",
           backgroundColor: "#ffffff",
-          minHeight: { xs: "100vh", sm: "75vh" },
+          minHeight: "100vh",
           width: { xs: "100vw", sm: "75vw" },
-          borderRadius: { xs: "0", sm: "50px" },
-          border: { xs: "none", sm: "2px solid #ffab00" },
-          boxShadow: { sm: 3 },
           paddingX: { xs: 0, md: 6 },
         }}
       >

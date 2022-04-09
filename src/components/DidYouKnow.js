@@ -16,7 +16,7 @@ const DidYouKnow = ({ random }) => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        background: "RGB(255,171,0, 0.2)",
+        background: "#E2E5DE",
       }}
     >
       <Typography variant="h6" component="h6">

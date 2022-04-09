@@ -17,7 +17,7 @@ const Header = () => {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
-        background: { xs: "#3a14ad", sm: "transparent" },
+        background: { xs: "#B2BEB5", sm: "transparent" },
         boxShadow: "none",
       }}
     >

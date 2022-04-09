@@ -7,7 +7,7 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        background: { xs: "#3a14ad", sm: "transparent" },
+        background: { xs: "#B2BEB5", sm: "transparent" },
         padding: { xs: 2, sm: 4 },
       }}
     >
@@ -15,7 +15,7 @@ const Footer = () => {
         variant="body1"
         component="p"
         sx={{
-          color: { xs: "white", sm: "secondary.main" },
+          color: { xs: "black", sm: "secondary.main" },
           textAlign: "center",
         }}
       >
@@ -23,7 +23,7 @@ const Footer = () => {
         <Link
           sx={{
             textDecoration: "none",
-            color: { xs: "white", sm: "secondary.main" },
+            color: { xs: "black", sm: "secondary.main" },
             "&:hover": {
               color: { xs: "black", sm: "primary.main" },
             },

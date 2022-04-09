@@ -60,7 +60,7 @@ const ApiInfo = () => {
     <Box
       component="main"
       sx={{
-        background: "RGB(255,171,0, 0.2)",
+        background: "#E2E5DE",
         padding: 2,
         boxShadow: 3,
         borderRadius: "12px",
