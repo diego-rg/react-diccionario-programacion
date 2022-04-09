@@ -18,7 +18,12 @@ const ApiInfo = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item xs={12} sm={3} sx={{ marginY: { xs: 0, sm: 2 } }}>
+        <Grid
+          item
+          xs={12}
+          sm={3}
+          sx={{ marginTop: { xs: 3, sm: 0 }, marginY: { sm: 3 } }}
+        >
           <Box sx={{ display: "flex" }}>
             <CheckIcon
               sx={{
@@ -30,7 +35,12 @@ const ApiInfo = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={9} sx={{ marginBottom: { xs: 3, sm: 0 } }}>
+        <Grid
+          item
+          xs={12}
+          sm={9}
+          sx={{ marginBottom: { xs: 3, sm: 0 }, marginY: { sm: 3 } }}
+        >
           <Box sx={{ display: "flex" }}>
             <Input
               fullWidth

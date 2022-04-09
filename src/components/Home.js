@@ -12,7 +12,14 @@ const Home = () => {
         marginTop: 2,
       }}
     >
-      <Typography variant="body1" component="p">
+      <Typography
+        variant="body1"
+        component="p"
+        sx={{
+          paddingBottom: 4,
+          textAlign: "center",
+        }}
+      >
         Consulta el diccionario de programación, crea tus propios apuntes en
         formato doc o consume nuestra API REST en tus proyectos.
       </Typography>
