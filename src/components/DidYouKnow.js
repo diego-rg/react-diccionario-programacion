@@ -9,8 +9,13 @@ const DidYouKnow = ({ random }) => {
       component="aside"
       elevation={5}
       sx={{
+        margin: "auto",
+        position: { xs: "static", xl: "absolute" },
+        top: "35px",
+        left: "35px",
         textAlign: "center",
         maxWidth: { xs: 250, md: 300 },
+        maxHeight: { xs: 150, md: 150 },
         padding: 2,
         display: "flex",
         flexDirection: "column",
