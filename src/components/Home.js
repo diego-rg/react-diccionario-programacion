@@ -9,7 +9,7 @@ const Home = () => {
       maxWidth="lg"
       sx={{
         padding: 2,
-        marginTop: 2,
+        marginTop: 4,
       }}
     >
       <Typography
