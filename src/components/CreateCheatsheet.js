@@ -118,14 +118,14 @@ const CreateCheatsheet = ({ terms, categories }) => {
       maxWidth="lg"
       sx={{
         padding: 2,
-        marginTop: 2,
+        marginTop: 4,
       }}
     >
       <Typography
         variant="body1"
         component="p"
         sx={{
-          paddingBottom: 4,
+          paddingBottom: 6,
           textAlign: "center",
         }}
       >
@@ -171,7 +171,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
         variant="body1"
         component="p"
         sx={{
-          marginTop: 4,
+          marginTop: 6,
           textAlign: "center",
         }}
       >

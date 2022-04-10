@@ -78,14 +78,14 @@ const SabiasQue = ({ terms, categories }) => {
       component="main"
       sx={{
         padding: 2,
-        marginTop: 2,
+        marginTop: 4,
       }}
     >
       <Typography
         variant="body1"
         component="p"
         sx={{
-          paddingBottom: 4,
+          paddingBottom: 6,
           textAlign: "center",
         }}
       >
@@ -131,7 +131,7 @@ const SabiasQue = ({ terms, categories }) => {
         multiline
         fullWidth
         sx={{
-          marginTop: 4,
+          marginTop: 6,
         }}
         InputProps={{
           readOnly: true,
