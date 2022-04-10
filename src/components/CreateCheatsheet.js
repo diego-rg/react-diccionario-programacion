@@ -118,7 +118,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
       maxWidth="lg"
       sx={{
         padding: 2,
-        marginTop: { xs: 2, sm: 4 },
+        marginTop: { xs: 2, sm: 2 },
       }}
     >
       <Typography

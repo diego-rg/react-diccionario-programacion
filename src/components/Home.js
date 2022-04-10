@@ -15,7 +15,7 @@ const Home = () => {
       maxWidth="lg"
       sx={{
         padding: 2,
-        marginTop: { xs: 2, sm: 4 },
+        marginTop: { xs: 2, sm: 2 },
       }}
     >
       <Typography
@@ -31,13 +31,13 @@ const Home = () => {
       </Typography>
 
       <Grid
-        spacing={4}
+        spacing={2}
         container
         direction="row"
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={3} sx={{ marginTop: { xl: 20, lg: 0 } }}>
           <LinkNav
             sx={{
               margin: 0,
@@ -53,7 +53,7 @@ const Home = () => {
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  height="160"
+                  height="auto"
                   image="/checking.svg"
                   alt="person reading data"
                 />
@@ -71,7 +71,7 @@ const Home = () => {
           </LinkNav>
         </Grid>
 
-        <Grid item xs={12} sm={3} sx={{ marginTop: { xl: 20, lg: 0 } }}>
+        <Grid item xs={12} sm={3}>
           <LinkNav href="/cheatsheet">
             <Card
               sx={{
@@ -82,7 +82,7 @@ const Home = () => {
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  height="160"
+                  height="auto"
                   image="/choosing.svg"
                   alt="person choosing data"
                 />
@@ -111,7 +111,7 @@ const Home = () => {
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  height="160"
+                  height="auto"
                   image="/data.svg"
                   alt="person checking a network"
                 />
