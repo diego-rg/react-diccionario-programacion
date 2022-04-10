@@ -78,14 +78,14 @@ const SabiasQue = ({ terms, categories }) => {
       component="main"
       sx={{
         padding: 2,
-        marginTop: 4,
+        marginTop: { xs: 2, sm: 4 },
       }}
     >
       <Typography
         variant="body1"
         component="p"
         sx={{
-          paddingBottom: 6,
+          paddingBottom: { xs: 4, sm: 6 },
           textAlign: "center",
         }}
       >

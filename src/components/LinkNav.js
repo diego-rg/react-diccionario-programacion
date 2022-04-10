@@ -15,7 +15,6 @@ const LinkNav = ({ className, href, children }) => {
       variant="h4"
       component="a"
       sx={{
-        m: { xs: 1, sm: 3 },
         textDecoration: "none",
         color: { xs: "black", sm: "secondary.main" },
         "&:hover": {

@@ -23,6 +23,14 @@ let mainTheme = createTheme({
         },
         {
           props: {
+            variant: "body2",
+          },
+          style: {
+            fontSize: "1.2rem",
+          },
+        },
+        {
+          props: {
             variant: "subtitle2",
           },
           style: {
