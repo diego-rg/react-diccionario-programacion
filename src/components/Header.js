@@ -17,7 +17,10 @@ const Header = () => {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
-        background: { xs: "#B2BEB5", sm: "transparent" },
+        background: {
+          xs: "linear-gradient(180deg,#B2BEB5,#D5E3D9)",
+          sm: "linear-gradient(180deg,#B2BEB5,#ffffff)",
+        },
         boxShadow: "none",
       }}
     >

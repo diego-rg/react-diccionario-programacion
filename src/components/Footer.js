@@ -7,7 +7,7 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        background: { xs: "#B2BEB5", sm: "transparent" },
+        background: { xs: "linear-gradient(360deg,#B2BEB5,#D5E3D9)", sm: "transparent" },
         padding: { xs: 2, sm: 4 },
       }}
     >
