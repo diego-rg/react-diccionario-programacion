@@ -21,7 +21,11 @@ const Header = () => {
         boxShadow: "none",
       }}
     >
-      <Toolbar>
+      <Toolbar
+        sx={{
+          borderBottom: { xs: "none", sm: "1px solid #E2E5DE" },
+        }}
+      >
         <LinkNav href="/">Inicio</LinkNav>
         <LinkNav href="/api">Api</LinkNav>
         <LinkNav href="/dictionary">Diccionario</LinkNav>
