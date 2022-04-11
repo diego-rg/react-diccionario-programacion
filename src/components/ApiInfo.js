@@ -7,6 +7,7 @@ import { Typography } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import CheckIcon from "@mui/icons-material/Check";
+import Divider from "@mui/material/Divider";
 
 const ApiInfo = () => {
   const renderedText = apiText.map((line) => {
@@ -62,6 +63,9 @@ const ApiInfo = () => {
             </IconButton>
           </Box>
         </Grid>
+        <Grid item xs={12} sm={9}>
+          <Divider variant="middle" sx={{ margin: 1 }} />
+        </Grid>
       </Grid>
     );
   });
@@ -70,12 +74,7 @@ const ApiInfo = () => {
     <Box
       component="main"
       sx={{
-        background: "#E2E5DE",
         padding: 2,
-        boxShadow: 3,
-        borderRadius: "12px",
-        marginY: {xs: 2, sm: 6},
-        marginX: 2,
       }}
     >
       {renderedText}
