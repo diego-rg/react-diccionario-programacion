@@ -26,7 +26,8 @@ const ApiInfo = () => {
         <Grid
           item
           xs={12}
-          sm={3}
+          sm={12}
+          md={3}
           sx={{ marginTop: { xs: 3, sm: 0 }, marginY: { sm: 3 } }}
         >
           <Box sx={{ display: "flex" }}>
@@ -44,7 +45,8 @@ const ApiInfo = () => {
         <Grid
           item
           xs={12}
-          sm={9}
+          sm={12}
+          md={9}
           sx={{ marginBottom: { xs: 3, sm: 0 }, marginY: { sm: 3 } }}
         >
           <Box sx={{ display: "flex" }}>
@@ -69,7 +71,7 @@ const ApiInfo = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={12} sm={9}>
+        <Grid item xs={12} sm={12} md={9}>
           <Divider variant="middle" sx={{ margin: 1 }} />
         </Grid>
       </Grid>

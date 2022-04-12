@@ -7,6 +7,13 @@ header a {
   padding: 2rem;
 }
 
+@media only screen and (max-width: 900px) {
+  header a {
+    padding: 1rem;
+  }
+}
+
+
 @media only screen and (max-width: 600px) {
   header a {
     padding: 0.5rem;
