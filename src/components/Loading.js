@@ -1,9 +1,8 @@
 import React from "react";
 
-import { Box, Typography } from "@mui/material";
-import CircularProgress from "@mui/material/CircularProgress";
-import Stack from "@mui/material/Stack";
+import { Box, Typography, Stack, CircularProgress } from "@mui/material";
 
+//Loader para mostar mientras se espera la respuesta de la API en Heroku.
 const Loading = () => {
   return (
     <Box
@@ -29,7 +28,7 @@ const Loading = () => {
           fontFamily: "Dancing Script",
           color: "white",
           textAlign: "center",
-          padding: 4
+          padding: 4,
         }}
       >
         Esperando la respuesta de la API...

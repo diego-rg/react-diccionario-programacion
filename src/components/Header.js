@@ -1,9 +1,9 @@
 import React from "react";
 import LinkNav from "./LinkNav";
 
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
+import { AppBar, Toolbar } from "@mui/material";
 
+//Header cuya navegación no usa router
 const Header = () => {
   return (
     <AppBar

@@ -1,28 +1,26 @@
 import React, { useState } from "react";
 import CheatsheetGenerator from "./CheatsheetGenerator";
 
-import Button from "@mui/material/Button";
+import { Box, Grid, Typography, Button } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { Box, Grid } from "@mui/material";
-import { Typography } from "@mui/material";
 
-//Recibimos terms, categories como props
+//Componente que recibe los datos solicitados a la API para mostrar todos los términos y añadirlos a los apuntes al hacer click en ellos
 const CreateCheatsheet = ({ terms, categories }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [savedTerms, setSavedTerm] = useState([]);
 
-  //función para guardar un término
+  //Función para guardar un término
   const saveTerm = (term) => {
     if (!savedTerms.includes(term)) {
       setSavedTerm([...savedTerms, term]);
     }
   };
 
-  //función para guardar un término
+  //Función para borrar un término
   const deleteTerm = (term) => {
-    let index = savedTerms.indexOf(term); //calculamos o índice dos terms poder selecionalo e eliminalo
-    savedTerms.splice(index, 1); //eliminamos o seleccionado polo seu indice
-    setSavedTerm([...savedTerms]); //gardamos o novo array sin o eliminado
+    let index = savedTerms.indexOf(term); //Buscamos el índice del term poder selecionarlo
+    savedTerms.splice(index, 1); //Lo eliminamos usando su índice
+    setSavedTerm([...savedTerms]); //Guardamos el nuevo array sin el eliminado
   };
 
   //Botones de cada término añadido para poder eliminarlo

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const Route = ({ path, children }) => {
-  //cambiar o componente cada vez que detecta cambio de url
+  //Cambiar el componente cada vez que detecta cambio de url
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   useEffect(() => {
