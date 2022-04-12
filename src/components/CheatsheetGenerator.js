@@ -1,14 +1,14 @@
 import React from "react";
 
 import { Document, Packer, Paragraph, TextRun, Header, Footer } from "docx";
-
 import { saveAs } from "file-saver";
-import Button from "@mui/material/Button";
-import SaveIcon from "@mui/icons-material/Save";
-import { Box } from "@mui/material";
 
+import { Box, Button } from "@mui/material";
+import SaveIcon from "@mui/icons-material/Save";
+
+//Componente que genera el archivo doc con los términos seleccionados en el componente CreateCheatsheet usando docx
 const CheatsheetGenerator = ({ savedTerms }) => {
-  //Xeración do doc
+  //Generamos los datos del documento a partir de los términos seleccionados
   const generateCheatsheet = () => {
     const cheatsheetData = [];
 
@@ -26,6 +26,7 @@ const CheatsheetGenerator = ({ savedTerms }) => {
       );
     }
 
+    //Creamos el documento e insertamos los datos usando cheatsheetData
     const doc = new Document({
       creator: "diego-rg",
       description:
@@ -76,6 +77,7 @@ const CheatsheetGenerator = ({ savedTerms }) => {
       ],
     });
 
+    //Generamos el documento para descargar
     Packer.toBlob(doc).then((blob) => {
       saveAs(blob, "apuntes.docx");
     });

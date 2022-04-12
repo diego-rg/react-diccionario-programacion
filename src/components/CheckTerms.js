@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import { Grid, Box, Typography } from "@mui/material";
+import { Grid, Box, Typography, Button, TextField } from "@mui/material";
 
-//Componente que hace una request a la Api del diccionario para obtener todos los términos y ver su definición al hacer click en ellos
-//Recibimos terms, categories como props
-const SabiasQue = ({ terms, categories }) => {
+//Componente que recibe los datos solicitados a la API para mostrar todos los términos y ver su definición al hacer click en ellos
+const CheckTerms = ({ terms, categories }) => {
   const [selectedTerm, setSelectedTerm] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -150,4 +147,4 @@ const SabiasQue = ({ terms, categories }) => {
   );
 };
 
-export default SabiasQue;
+export default CheckTerms;
