@@ -22,7 +22,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
   const deleteTerm = (term) => {
     let index = savedTerms.indexOf(term); //calculamos o índice dos terms poder selecionalo e eliminalo
     savedTerms.splice(index, 1); //eliminamos o seleccionado polo seu indice
-    setSavedTerm([...savedTerms]); //gardamos o novo array si o eliminado
+    setSavedTerm([...savedTerms]); //gardamos o novo array sin o eliminado
   };
 
   //Botones de cada término añadido para poder eliminarlo

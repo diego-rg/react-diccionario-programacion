@@ -1,14 +1,18 @@
 import React from "react";
 import apiText from "../api/apiText";
 
-import { Input } from "@mui/material";
-import { Grid, Box } from "@mui/material";
-import { Typography } from "@mui/material";
-import IconButton from "@mui/material/IconButton";
+import {
+  Input,
+  Grid,
+  Box,
+  Typography,
+  IconButton,
+  Divider,
+} from "@mui/material";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import CheckIcon from "@mui/icons-material/Check";
-import Divider from "@mui/material/Divider";
 
+//Componente que renderiza la documentación de la API que tenemos en un fichero
 const ApiInfo = () => {
   const renderedText = apiText.map((line) => {
     return (
@@ -36,6 +40,7 @@ const ApiInfo = () => {
             </Typography>
           </Box>
         </Grid>
+
         <Grid
           item
           xs={12}
@@ -63,6 +68,7 @@ const ApiInfo = () => {
             </IconButton>
           </Box>
         </Grid>
+
         <Grid item xs={12} sm={9}>
           <Divider variant="middle" sx={{ margin: 1 }} />
         </Grid>

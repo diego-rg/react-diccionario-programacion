@@ -11,8 +11,8 @@ const DidYouKnow = ({ random }) => {
       sx={{
         margin: "auto",
         position: { xs: "static", xl: "absolute" },
-        top: "50px",
-        left: "150px",
+        top: "40px",
+        left: "160px",
         textAlign: "center",
         maxWidth: { xs: "82.23vw", md: 300 },
         maxHeight: { xs: 150, md: 150 },
