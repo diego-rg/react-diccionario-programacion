@@ -1,3 +1,1 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Consumo de nuestra API de términos de programación. Los usuarios pueden ver las definiciones, crear apuntes personalizados y descargarlos en formato doc.
