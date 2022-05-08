@@ -11,8 +11,8 @@ const DidYouKnow = ({ random }) => {
       sx={{
         margin: "auto",
         position: { xs: "static", xl: "absolute" },
-        top: "40px",
-        left: "160px",
+        top: "50px",
+        left: "50px",
         textAlign: "center",
         maxWidth: { xs: "82.23vw", md: 300 },
         maxHeight: { xs: 150, md: 150 },
@@ -22,7 +22,6 @@ const DidYouKnow = ({ random }) => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        background: "#E2E5DE",
       }}
     >
       <Typography variant="h6" component="h6">

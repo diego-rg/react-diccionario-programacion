@@ -12,7 +12,7 @@ const LinkNav = ({ className, href, children }) => {
 
   return (
     <Typography
-      variant="h4"
+      variant="h5"
       component="a"
       sx={{
         textDecoration: "none",

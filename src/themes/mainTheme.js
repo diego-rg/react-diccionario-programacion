@@ -39,10 +39,10 @@ let mainTheme = createTheme({
         },
         {
           props: {
-            variant: "h4",
+            variant: "h5",
           },
           style: {
-            fontFamily: "Josefin Sans",
+            fontFamily: "Lato",
           },
         },
         {

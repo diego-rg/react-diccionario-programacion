@@ -11,6 +11,7 @@ import Home from "./components/Home";
 import ApiInfo from "./components/ApiInfo";
 import Loading from "./components/Loading";
 
+import "@fontsource/lato"
 import "@fontsource/josefin-sans";
 
 import mainTheme from "./themes/mainTheme"; //Archivo para los themes de mui
@@ -74,39 +75,25 @@ const App = () => {
     <Loading />
   ) : (
     <ThemeProvider theme={mainTheme}>
-      <Header />
-      <Container
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          minHeight: "100vh",
-          width: { xs: "100vw", sm: "75vw" },
-          paddingX: { xs: 0, md: 6 },
-        }}
-      >
-        <Grid container>
-          <Grid item xs={12}>
-            <Route path="/">
-              <Home />
-              <DidYouKnow random={random} />
-            </Route>
-            <Route path="/api">
-              <ApiInfo />
-              <DidYouKnow random={random} />
-            </Route>
-            <Route path="/dictionary">
-              <CheckTerms terms={terms} categories={categories} />
-              <DidYouKnow random={random} />
-            </Route>
-            <Route path="/cheatsheet">
-              <CreateCheatsheet terms={terms} categories={categories} />
-              <DidYouKnow random={random} />
-            </Route>
-          </Grid>
-          <Grid item xs={12} sx={{ alignSelf: "flex-end" }}>
-            <Footer />
-          </Grid>
-        </Grid>
+      <Container maxWidth="md" sx={{ minHeight: "100vh" }}>
+        <Header />
+        <Route path="/">
+          <Home />
+          <DidYouKnow random={random} />
+        </Route>
+        <Route path="/api">
+          <ApiInfo />
+          <DidYouKnow random={random} />
+        </Route>
+        <Route path="/dictionary">
+          <CheckTerms terms={terms} categories={categories} />
+          <DidYouKnow random={random} />
+        </Route>
+        <Route path="/cheatsheet">
+          <CreateCheatsheet terms={terms} categories={categories} />
+          <DidYouKnow random={random} />
+        </Route>
+        <Footer />
       </Container>
     </ThemeProvider>
   );

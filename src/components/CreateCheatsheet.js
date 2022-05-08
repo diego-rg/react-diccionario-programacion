@@ -124,7 +124,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
         component="p"
         sx={{
           paddingBottom: { xs: 4, sm: 6 },
-          textAlign: "center",
+          textAlign: "justify",
         }}
       >
         Haz click en un término para agregarlo a tus apuntes. Puedes
@@ -170,7 +170,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
         component="p"
         sx={{
           marginTop: 6,
-          textAlign: "center",
+          textAlign: "justify",
         }}
       >
         Aquí podrás ver los términos que has seleccionado. Haz click en ellos

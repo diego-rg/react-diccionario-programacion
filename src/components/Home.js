@@ -12,9 +12,7 @@ const Home = () => {
   return (
     <Box
       component="main"
-      maxWidth="lg"
       sx={{
-        padding: 2,
         marginTop: { xs: 2, sm: 2 },
       }}
     >
@@ -23,7 +21,7 @@ const Home = () => {
         component="p"
         sx={{
           paddingBottom: 4,
-          textAlign: "center",
+          textAlign: "justify",
         }}
       >
         Consulta el diccionario de programación, crea tus propios apuntes en

@@ -83,7 +83,7 @@ const CheckTerms = ({ terms, categories }) => {
         component="p"
         sx={{
           paddingBottom: { xs: 4, sm: 6 },
-          textAlign: "center",
+          textAlign: "justify",
         }}
       >
         Busca los términos haciendo click en su categoría y luego haz click en
