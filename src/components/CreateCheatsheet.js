@@ -134,7 +134,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
         container
         spacing={0.5}
         direction="row"
-        justifyContent="center"
+        justifyContent="space-between"
         alignItems="center"
       >
         <Grid item key="todos">
@@ -157,7 +157,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
         container
         spacing={0.5}
         direction="row"
-        justifyContent="center"
+        justifyContent="space-between"
         alignItems="center"
         sx={{
           marginTop: 4,
@@ -180,7 +180,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
         container
         spacing={0.5}
         direction="row"
-        justifyContent="center"
+        justifyContent="space-between"
         alignItems="center"
         sx={{
           marginTop: 4,
