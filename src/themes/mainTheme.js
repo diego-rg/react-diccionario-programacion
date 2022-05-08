@@ -3,10 +3,10 @@ import { responsiveFontSizes, createTheme } from "@mui/material/styles";
 let mainTheme = createTheme({
   palette: {
     primary: {
-      main: "#676767",
+      main: "#e70a3e",
     },
     secondary: {
-      main: "#2d2c3f",
+      main: "#1f264e",
     },
   },
   components: {
@@ -42,7 +42,7 @@ let mainTheme = createTheme({
             variant: "h4",
           },
           style: {
-            fontFamily: "Dancing Script",
+            fontFamily: "Josefin Sans",
           },
         },
         {
@@ -50,7 +50,7 @@ let mainTheme = createTheme({
             variant: "h6",
           },
           style: {
-            fontFamily: "Dancing Script",
+            fontFamily: "Josefin Sans",
           },
         },
       ],

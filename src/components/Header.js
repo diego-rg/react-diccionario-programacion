@@ -1,7 +1,7 @@
 import React from "react";
 import LinkNav from "./LinkNav";
 
-import { AppBar, Toolbar } from "@mui/material";
+import { AppBar, Toolbar, Container, Box } from "@mui/material";
 
 //Header cuya navegación no usa router
 const Header = () => {
@@ -9,31 +9,22 @@ const Header = () => {
     <AppBar
       position="static"
       sx={{
-        paddingY: {
-          xs: 2,
-          sm: 4,
-        },
-        display: "flex",
-        flexDirection: "row",
         alignItems: "center",
-        justifyContent: "center",
-        background: {
-          xs: "linear-gradient(180deg,#B2BEB5,#D5E3D9)",
-          sm: "linear-gradient(180deg,#B2BEB5,#ffffff)",
-        },
+        justifyContent: "space-between",
+        background: "transparent",
         boxShadow: "none",
       }}
     >
-      <Toolbar
-        sx={{
-          borderBottom: { xs: "none", sm: "1px solid #E2E5DE" },
-        }}
-      >
-        <LinkNav href="/">Inicio</LinkNav>
-        <LinkNav href="/api">Api</LinkNav>
-        <LinkNav href="/dictionary">Diccionario</LinkNav>
-        <LinkNav href="/cheatsheet">Apuntes</LinkNav>
-      </Toolbar>
+      <Container maxWidth="md" disableGutters>
+        <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
+          <LinkNav href="/">Diego</LinkNav>
+          <Box>
+            <LinkNav href="/api">Api</LinkNav>
+            <LinkNav href="/dictionary">Diccionario</LinkNav>
+            <LinkNav href="/cheatsheet">Apuntes</LinkNav>
+          </Box>
+        </Toolbar>
+      </Container>
     </AppBar>
   );
 };
