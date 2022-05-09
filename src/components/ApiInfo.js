@@ -23,13 +23,7 @@ const ApiInfo = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={3}
-          sx={{ marginTop: { xs: 3, sm: 0 }, marginY: { sm: 3 } }}
-        >
+        <Grid item xs={12} sm={12} md={3}>
           <Box sx={{ display: "flex" }}>
             <CheckIcon
               sx={{
@@ -78,16 +72,7 @@ const ApiInfo = () => {
     );
   });
 
-  return (
-    <Box
-      component="main"
-      sx={{
-        padding: 2,
-      }}
-    >
-      {renderedText}
-    </Box>
-  );
+  return <Box component="main">{renderedText}</Box>;
 };
 
 export default ApiInfo;

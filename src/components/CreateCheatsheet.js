@@ -111,14 +111,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
     });
 
   return (
-    <Box
-      component="main"
-      maxWidth="lg"
-      sx={{
-        padding: 2,
-        marginTop: { xs: 2, sm: 2 },
-      }}
-    >
+    <Box component="main">
       <Typography
         variant="body1"
         component="p"

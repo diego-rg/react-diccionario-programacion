@@ -70,14 +70,7 @@ const CheckTerms = ({ terms, categories }) => {
     });
 
   return (
-    <Box
-      maxWidth="lg"
-      component="main"
-      sx={{
-        padding: 2,
-        marginTop: { xs: 2, sm: 2 },
-      }}
-    >
+    <Box component="main">
       <Typography
         variant="body1"
         component="p"
