@@ -35,7 +35,7 @@ const Home = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item xs={12} sm={6} md={3} sx={{ marginTop: { xl: 20, lg: 0 } }}>
+        <Grid item xs={12} sm={6} md={4} sx={{ marginTop: { xl: 20, lg: 0 } }}>
           <LinkNav
             sx={{
               margin: 0,
@@ -69,7 +69,7 @@ const Home = () => {
           </LinkNav>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={4}>
           <LinkNav href="/cheatsheet">
             <Card
               sx={{
@@ -98,7 +98,7 @@ const Home = () => {
           </LinkNav>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={4}>
           <LinkNav href="/api">
             <Card
               sx={{
