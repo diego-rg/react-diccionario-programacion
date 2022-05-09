@@ -7,15 +7,15 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        background: { xs: "linear-gradient(360deg,#B2BEB5,#D5E3D9)", sm: "transparent" },
-        padding: { xs: 2, sm: 4 },
+        paddingY: 2,
+        marginTop: "auto",
       }}
     >
       <Typography
         variant="body1"
         component="p"
         sx={{
-          color: { xs: "black", sm: "secondary.main" },
+          color: "secondary.main",
           textAlign: "center",
         }}
       >
@@ -23,10 +23,8 @@ const Footer = () => {
         <Link
           sx={{
             textDecoration: "none",
-            color: { xs: "black", sm: "secondary.main" },
-            "&:hover": {
-              color: { xs: "black", sm: "primary.main" },
-            },
+            color: "secondary.main",
+            "&:hover": { color: "primary.main" },
           }}
           href="https://github.com/diego-rg"
         >

@@ -11,13 +11,13 @@ import Home from "./components/Home";
 import ApiInfo from "./components/ApiInfo";
 import Loading from "./components/Loading";
 
-import "@fontsource/lato"
+import "@fontsource/lato";
 import "@fontsource/josefin-sans";
 
 import mainTheme from "./themes/mainTheme"; //Archivo para los themes de mui
 
 import { ThemeProvider } from "@mui/material/styles";
-import { Container, Grid } from "@mui/material";
+import { Container } from "@mui/material";
 
 //Hacemos las requests a la API y las pasamos a los componentes
 const App = () => {
@@ -75,7 +75,10 @@ const App = () => {
     <Loading />
   ) : (
     <ThemeProvider theme={mainTheme}>
-      <Container maxWidth="md" sx={{ minHeight: "100vh" }}>
+      <Container
+        maxWidth="md"
+        sx={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+      >
         <Header />
         <Route path="/">
           <Home />
