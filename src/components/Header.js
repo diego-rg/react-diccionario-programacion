@@ -27,7 +27,14 @@ const Header = () => {
       <Container maxWidth="md" disableGutters>
         <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <LinkNav href="/">diegoL</LinkNav>
+          <LinkNav href="/">
+              <Box
+                component="img"
+                src="/favicon-32x32.png"
+                width="30px"
+                alt="Logo del diccionario"
+              ></Box>
+            </LinkNav>
           </Box>
 
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
@@ -75,9 +82,19 @@ const Header = () => {
               justifyContent: "flex-end",
             }}
           >
-            <LinkNav href="/">diegoS</LinkNav>
+            <LinkNav href="/">
+              <Box
+                component="img"
+                src="/favicon-32x32.png"
+                width="22px"
+                alt="Logo del diccionario"
+              ></Box>
+            </LinkNav>
           </Box>
-          <Box className="navbar-menu-md" sx={{ display: { xs: "none", md: "flex" } }}>
+          <Box
+            className="navbar-menu-md"
+            sx={{ display: { xs: "none", md: "flex" } }}
+          >
             <LinkNav href="/api">Api</LinkNav>
             <LinkNav href="/dictionary">Diccionario</LinkNav>
             <LinkNav href="/cheatsheet">Apuntes</LinkNav>
