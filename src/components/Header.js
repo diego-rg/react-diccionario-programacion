@@ -77,7 +77,7 @@ const Header = () => {
           >
             <LinkNav href="/">diegoS</LinkNav>
           </Box>
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          <Box className="navbar-menu-md" sx={{ display: { xs: "none", md: "flex" } }}>
             <LinkNav href="/api">Api</LinkNav>
             <LinkNav href="/dictionary">Diccionario</LinkNav>
             <LinkNav href="/cheatsheet">Apuntes</LinkNav>

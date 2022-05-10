@@ -22,10 +22,9 @@ const Loading = () => {
         </Stack>
       </Box>
       <Typography
-        variant="h4"
+        variant="h5"
         component="p"
         sx={{
-          fontFamily: "Dancing Script",
           color: "white",
           textAlign: "center",
           padding: 4,
