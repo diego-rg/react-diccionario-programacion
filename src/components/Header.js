@@ -24,7 +24,7 @@ const Header = () => {
         boxShadow: "none",
       }}
     >
-      <Container maxWidth="md" disableGutters>
+      <Container maxWidth="lg" disableGutters>
         <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
           <LinkNav href="/">

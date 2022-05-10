@@ -3,24 +3,15 @@ import React from "react";
 import LinkNav from "./LinkNav";
 
 import { Box, Typography, Grid } from "@mui/material";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import { CardActionArea } from "@mui/material";
+import { Card, CardContent, CardMedia, CardActionArea } from "@mui/material";
 
 const Home = () => {
   return (
-    <Box
-      component="main"
-      sx={{
-        marginTop: { xs: 2, sm: 2 },
-      }}
-    >
+    <Box component="main">
       <Typography
         variant="body1"
         component="p"
         sx={{
-          paddingBottom: 4,
           textAlign: "justify",
         }}
       >
@@ -28,24 +19,13 @@ const Home = () => {
         formato doc o consume nuestra API REST en tus proyectos.
       </Typography>
 
-      <Grid
-        spacing={2}
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Grid item xs={12} sm={6} md={4} sx={{ marginTop: { xl: 20, lg: 0 } }}>
-          <LinkNav
-            sx={{
-              margin: 0,
-            }}
-            href="/dictionary"
-          >
+      <Grid spacing={2} container>
+        <Grid item xs={12} sm={6} md={4}>
+          <LinkNav href="/dictionary">
             <Card
               sx={{
-                maxWidth: { xs: "none", sm: 300 },
-                border: "1px solid #E2E5DE",
+                // border: "1px solid #E2E5DE",
+                boxShadow: "none",
               }}
             >
               <CardActionArea>
@@ -73,8 +53,8 @@ const Home = () => {
           <LinkNav href="/cheatsheet">
             <Card
               sx={{
-                maxWidth: { xs: "none", sm: 300 },
-                border: "1px solid #E2E5DE",
+                // border: "1px solid #E2E5DE",
+                boxShadow: "none",
               }}
             >
               <CardActionArea>
@@ -102,8 +82,8 @@ const Home = () => {
           <LinkNav href="/api">
             <Card
               sx={{
-                maxWidth: { xs: "none", sm: 300 },
-                border: "1px solid #E2E5DE",
+                // border: "1px solid #E2E5DE",
+                boxShadow: "none",
               }}
             >
               <CardActionArea>

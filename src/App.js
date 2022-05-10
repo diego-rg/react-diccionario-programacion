@@ -76,7 +76,7 @@ const App = () => {
   ) : (
     <ThemeProvider theme={mainTheme}>
       <Container
-        maxWidth="md"
+        maxWidth="lg"
         sx={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
       >
         <Header />
