@@ -73,7 +73,7 @@ const ApiInfo = () => {
   });
 
   return (
-    <Box component="main" sx={{ paddingY: 4 }}>
+    <Box component="main" sx={{ marginTop: "auto" }}>
       {renderedText}
     </Box>
   );

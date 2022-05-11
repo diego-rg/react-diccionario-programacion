@@ -5,3 +5,8 @@ body {
 .navbar-menu-md a {
   margin-left: 25px;
 }
+
+.logo-container a:hover{
+  border-bottom: 1px solid transparent;
+  transform: scale(1.05)
+}

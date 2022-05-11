@@ -12,7 +12,7 @@ const Home = () => {
         variant="body1"
         component="p"
         sx={{
-          textAlign: "justify",
+          textAlign: "center",
         }}
       >
         Consulta el diccionario de programación, crea tus propios apuntes en

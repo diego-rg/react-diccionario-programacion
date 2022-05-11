@@ -26,8 +26,11 @@ const Header = () => {
     >
       <Container maxWidth="lg" disableGutters>
         <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-          <LinkNav href="/">
+          <Box
+            className="logo-container"
+            sx={{ display: { xs: "none", md: "flex" } }}
+          >
+            <LinkNav href="/">
               <Box
                 component="img"
                 src="/favicon-32x32.png"
@@ -77,6 +80,7 @@ const Header = () => {
           </Box>
 
           <Box
+            className="logo-container"
             sx={{
               display: { xs: "flex", md: "none" },
               justifyContent: "flex-end",
