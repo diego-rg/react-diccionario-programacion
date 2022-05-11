@@ -72,7 +72,11 @@ const ApiInfo = () => {
     );
   });
 
-  return <Box component="main">{renderedText}</Box>;
+  return (
+    <Box component="main" sx={{ paddingY: 4 }}>
+      {renderedText}
+    </Box>
+  );
 };
 
 export default ApiInfo;

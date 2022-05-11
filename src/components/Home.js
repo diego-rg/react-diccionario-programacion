@@ -7,7 +7,7 @@ import { Card, CardContent, CardMedia, CardActionArea } from "@mui/material";
 
 const Home = () => {
   return (
-    <Box component="main">
+    <Box component="main" sx={{paddingY: 4}}>
       <Typography
         variant="body1"
         component="p"
@@ -19,7 +19,7 @@ const Home = () => {
         formato doc o consume nuestra API REST en tus proyectos.
       </Typography>
 
-      <Grid spacing={2} container>
+      <Grid spacing={9} container>
         <Grid item xs={12} sm={6} md={4}>
           <LinkNav href="/dictionary">
             <Card
@@ -28,14 +28,14 @@ const Home = () => {
                 boxShadow: "none",
               }}
             >
-              <CardActionArea>
+              <CardActionArea sx={{ padding: 2 }}>
                 <CardMedia
                   component="img"
                   height="auto"
                   image="/checking.svg"
                   alt="person reading data"
                 />
-                <CardContent>
+                <CardContent sx={{ padding: 0, paddingTop: 3 }}>
                   <Typography gutterBottom variant="body2" component="h2">
                     Diccionario
                   </Typography>
@@ -57,14 +57,14 @@ const Home = () => {
                 boxShadow: "none",
               }}
             >
-              <CardActionArea>
+              <CardActionArea sx={{ padding: 2 }}>
                 <CardMedia
                   component="img"
                   height="auto"
                   image="/choosing.svg"
                   alt="person choosing data"
                 />
-                <CardContent>
+                <CardContent sx={{ padding: 0, paddingTop: 2 }}>
                   <Typography gutterBottom variant="body2" component="h2">
                     Apuntes
                   </Typography>
@@ -86,14 +86,14 @@ const Home = () => {
                 boxShadow: "none",
               }}
             >
-              <CardActionArea>
+              <CardActionArea sx={{ padding: 2 }}>
                 <CardMedia
                   component="img"
                   height="auto"
                   image="/data.svg"
                   alt="person checking a network"
                 />
-                <CardContent>
+                <CardContent sx={{ padding: 0, paddingTop: 3 }}>
                   <Typography gutterBottom variant="body2" component="h2">
                     API
                   </Typography>
