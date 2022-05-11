@@ -15,10 +15,12 @@ const LinkNav = ({ className, href, children }) => {
       variant="h5"
       component="a"
       sx={{
+        borderBottom: "1px solid transparent",
         textDecoration: "none",
         color: "secondary.main",
         "&:hover": {
           color: "primary.main",
+          borderBottom: "1px solid #e70a3e"
         },
       }}
       onClick={onClick}
