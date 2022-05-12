@@ -7,17 +7,32 @@ import { Card, CardContent, CardMedia, CardActionArea } from "@mui/material";
 
 const Home = () => {
   return (
-    <Box component="main" sx={{paddingY: 4}}>
-      <Typography
-        variant="body1"
-        component="p"
-        sx={{
-          textAlign: "center",
-        }}
-      >
-        Consulta el diccionario de programación, crea tus propios apuntes en
-        formato doc o consume nuestra API REST en tus proyectos.
-      </Typography>
+    <Box component="main" sx={{ marginY: 8 }}>
+      <Grid spacing={9} container alignItems="center" justifyContent="center">
+        <Grid item xs={12} sm={6} md={6}>
+          <Typography
+            variant="body1"
+            component="p"
+            sx={{
+              marginX: "auto",
+              maxWidth: {md: "75%"},
+              textAlign: { xs: "center", sm: "center", md: "start" },
+            }}
+          >
+            Consulta el diccionario de programación, crea tus propios apuntes en
+            formato doc o consume nuestra API REST en tus proyectos.
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} sm={6} md={6}>
+          <Box
+            component="img"
+            src="/book.svg"
+            width="75%"
+            alt="Imagen de una mujer con un libro"
+          ></Box>
+        </Grid>
+      </Grid>
 
       <Grid spacing={9} container>
         <Grid item xs={12} sm={6} md={4}>
