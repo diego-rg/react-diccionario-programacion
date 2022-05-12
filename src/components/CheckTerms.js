@@ -108,7 +108,7 @@ const CheckTerms = ({ terms, categories }) => {
         container
         spacing={0.5}
         direction="row"
-        justifyContent="space-between"
+        justifyContent="flex-start"
         alignItems="center"
         sx={{
           marginTop: 4,
