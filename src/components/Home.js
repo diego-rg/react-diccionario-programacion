@@ -7,15 +7,29 @@ import { Card, CardContent, CardMedia, CardActionArea } from "@mui/material";
 
 const Home = () => {
   return (
-    <Container component="main" maxWidth="lg" sx={{ marginY: 8 }}>
-      <Grid spacing={9} container alignItems="center" justifyContent="center">
+    <Container
+      component="main"
+      maxWidth="none"
+      sx={{
+        marginY: {xs:4, sm: 4, md: 8},
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <Grid
+        spacing={7}
+        container
+        alignItems="center"
+        justifyContent="center"
+        maxWidth="md"
+      >
         <Grid item xs={12} sm={12} md={6}>
           <Typography
             variant="body1"
             component="p"
             sx={{
               margin: "auto",
-              width: { md: "70%" },
               maxWidth: "500px",
               textAlign: { xs: "center", sm: "center", md: "start" },
             }}
@@ -26,8 +40,7 @@ const Home = () => {
           <Box
             sx={{
               margin: "auto",
-              maxWidth :"500px",
-              width: { md: "70%" },
+              maxWidth: "500px",
               textAlign: { xs: "center", sm: "center", md: "start" },
             }}
           >
@@ -53,12 +66,12 @@ const Home = () => {
           xs={12}
           sm={12}
           md={6}
-          sx={{ display: "flex", justifyContent: "center" }}
+          sx={{ display: "flex", justifyContent: "center", order:{xs: -1, sm: -1, md: 1} }}
         >
           <Box
             component="img"
             src="/book.svg"
-            width="70%"
+            width="90%"
             maxWidth="400px"
             alt="Imagen de una mujer con un libro"
           ></Box>
@@ -66,7 +79,9 @@ const Home = () => {
       </Grid>
 
       <Grid
+        maxWidth="lg"
         id="info"
+        component="section"
         spacing={9}
         container
         sx={{ marginY: 4 }}
