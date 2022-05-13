@@ -17,7 +17,7 @@ import "@fontsource/josefin-sans";
 import mainTheme from "./themes/mainTheme"; //Archivo para los themes de mui
 
 import { ThemeProvider } from "@mui/material/styles";
-import { Container } from "@mui/material";
+import { Box } from "@mui/material";
 
 //Hacemos las requests a la API y las pasamos a los componentes
 const App = () => {
@@ -75,9 +75,13 @@ const App = () => {
     <Loading />
   ) : (
     <ThemeProvider theme={mainTheme}>
-      <Container
-        maxWidth="lg"
-        sx={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+      <Box
+        sx={{
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center"
+        }}
       >
         <Header />
         <Route path="/">
@@ -97,7 +101,7 @@ const App = () => {
           <DidYouKnow random={random} />
         </Route>
         <Footer />
-      </Container>
+      </Box>
     </ThemeProvider>
   );
 };

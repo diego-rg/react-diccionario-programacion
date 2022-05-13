@@ -2,12 +2,12 @@ import React from "react";
 
 import LinkNav from "./LinkNav";
 
-import { Box, Typography, Grid, Button } from "@mui/material";
+import { Box, Typography, Grid, Button, Container } from "@mui/material";
 import { Card, CardContent, CardMedia, CardActionArea } from "@mui/material";
 
 const Home = () => {
   return (
-    <Box component="main" sx={{ marginY: 8 }}>
+    <Container component="main" maxWidth="lg" sx={{ marginY: 8 }}>
       <Grid spacing={9} container alignItems="center" justifyContent="center">
         <Grid item xs={12} sm={12} md={6}>
           <Typography
@@ -15,7 +15,8 @@ const Home = () => {
             component="p"
             sx={{
               margin: "auto",
-              maxWidth: { md: "70%" },
+              width: { md: "70%" },
+              maxWidth: "500px",
               textAlign: { xs: "center", sm: "center", md: "start" },
             }}
           >
@@ -25,7 +26,8 @@ const Home = () => {
           <Box
             sx={{
               margin: "auto",
-              maxWidth: { md: "70%" },
+              maxWidth :"500px",
+              width: { md: "70%" },
               textAlign: { xs: "center", sm: "center", md: "start" },
             }}
           >
@@ -37,7 +39,6 @@ const Home = () => {
                   sm: "1.05rem",
                 },
               }}
-              size="large"
               variant="contained"
               color="primary"
               href="#info"
@@ -58,6 +59,7 @@ const Home = () => {
             component="img"
             src="/book.svg"
             width="70%"
+            maxWidth="400px"
             alt="Imagen de una mujer con un libro"
           ></Box>
         </Grid>
@@ -158,7 +160,7 @@ const Home = () => {
           </LinkNav>
         </Grid>
       </Grid>
-    </Box>
+    </Container>
   );
 };
 

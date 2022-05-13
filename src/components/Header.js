@@ -25,7 +25,7 @@ const Header = () => {
       }}
     >
       <Container maxWidth="lg" disableGutters>
-        <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <Box
             className="logo-container"
             sx={{ display: { xs: "none", md: "flex" } }}
