@@ -9,9 +9,8 @@ const DidYouKnow = ({ random }) => {
       component="aside"
       elevation={5}
       sx={{
-        margin: "auto",
         position: { xs: "static", xl: "absolute" },
-        top: "25px",
+        top: "100px",
         left: "25px",
         textAlign: "center",
         maxWidth: { xs: "82.23vw", md: 250 },

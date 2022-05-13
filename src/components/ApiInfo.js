@@ -8,6 +8,7 @@ import {
   Typography,
   IconButton,
   Divider,
+  Container
 } from "@mui/material";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import CheckIcon from "@mui/icons-material/Check";
@@ -73,9 +74,9 @@ const ApiInfo = () => {
   });
 
   return (
-    <Box component="main" sx={{ marginTop: "auto" }}>
+    <Container component="main" sx={{ marginTop: "auto" }}>
       {renderedText}
-    </Box>
+    </Container>
   );
 };
 

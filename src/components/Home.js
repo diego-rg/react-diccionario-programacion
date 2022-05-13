@@ -11,25 +11,26 @@ const Home = () => {
       component="main"
       maxWidth="none"
       sx={{
-        marginY: { xs: 4, sm: 4, md: 8 },
+        marginY: 4,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
       }}
     >
       <Grid
-        spacing={7}
+        component="section"
+        spacing={9}
         container
         alignItems="center"
         justifyContent="center"
         maxWidth="md"
+        sx={{ height: "70vh" }}
       >
         <Grid item xs={12} sm={12} md={6}>
           <Typography
             variant="body1"
             component="p"
             sx={{
-              paddingTop: 8,
               margin: "auto",
               maxWidth: "500px",
               textAlign: { xs: "center", sm: "center", md: "start" },
@@ -40,7 +41,6 @@ const Home = () => {
           </Typography>
           <Box
             sx={{
-              paddingBottom: 8,
               margin: "auto",
               maxWidth: "500px",
               textAlign: { xs: "center", sm: "center", md: "start" },
@@ -88,7 +88,7 @@ const Home = () => {
         maxWidth="lg"
         id="info"
         component="section"
-        spacing={9}
+        spacing={7}
         container
         sx={{ marginY: 4 }}
         alignItems="center"
