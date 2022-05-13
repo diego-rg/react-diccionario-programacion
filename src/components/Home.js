@@ -11,7 +11,7 @@ const Home = () => {
       component="main"
       maxWidth="none"
       sx={{
-        marginY: {xs:4, sm: 4, md: 8},
+        marginY: { xs: 4, sm: 4, md: 8 },
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -29,6 +29,7 @@ const Home = () => {
             variant="body1"
             component="p"
             sx={{
+              paddingTop: 8,
               margin: "auto",
               maxWidth: "500px",
               textAlign: { xs: "center", sm: "center", md: "start" },
@@ -39,6 +40,7 @@ const Home = () => {
           </Typography>
           <Box
             sx={{
+              paddingBottom: 8,
               margin: "auto",
               maxWidth: "500px",
               textAlign: { xs: "center", sm: "center", md: "start" },
@@ -66,7 +68,11 @@ const Home = () => {
           xs={12}
           sm={12}
           md={6}
-          sx={{ display: "flex", justifyContent: "center", order:{xs: -1, sm: -1, md: 1} }}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            order: { xs: -1, sm: -1, md: 1 },
+          }}
         >
           <Box
             component="img"

@@ -36,6 +36,7 @@ const Header = () => {
                 src="/favicon-32x32.png"
                 width="30px"
                 alt="Logo del diccionario"
+                sx={{ paddingTop: 1 }}
               ></Box>
             </LinkNav>
           </Box>
@@ -47,7 +48,7 @@ const Header = () => {
               color="secondary"
               sx={{ paddingLeft: 0 }}
             >
-              <MenuIcon />
+              <MenuIcon sx={{ fontSize: "120%" }} />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -90,8 +91,9 @@ const Header = () => {
               <Box
                 component="img"
                 src="/favicon-32x32.png"
-                width="22px"
+                width="28px"
                 alt="Logo del diccionario"
+                sx={{ paddingTop: 1 }}
               ></Box>
             </LinkNav>
           </Box>
