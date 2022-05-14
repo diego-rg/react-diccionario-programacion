@@ -74,7 +74,7 @@ const ApiInfo = () => {
   });
 
   return (
-    <Container component="main" sx={{ marginTop: "auto" }}>
+    <Container component="main" sx={{ marginTop: "auto", paddingY: 4 }}>
       {renderedText}
     </Container>
   );

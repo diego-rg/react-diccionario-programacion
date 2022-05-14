@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CheatsheetGenerator from "./CheatsheetGenerator";
 
-import { Box, Grid, Typography, Button } from "@mui/material";
+import { Container, Grid, Typography, Button } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 //Componente que recibe los datos solicitados a la API para mostrar todos los términos y añadirlos a los apuntes al hacer click en ellos
@@ -111,7 +111,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
     });
 
   return (
-    <Box component="main" sx={{ marginY: 8 }}>
+    <Container component="main" maxWidth="lg" sx={{ marginY: {xs: 4, md: 8 }}}>
       <Typography
         variant="body1"
         component="p"
@@ -180,7 +180,7 @@ const CreateCheatsheet = ({ terms, categories }) => {
         {renderedSavedTerms}
       </Grid>
       <CheatsheetGenerator savedTerms={savedTerms} />
-    </Box>
+    </Container>
   );
 };
 
