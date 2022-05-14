@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <Container
       component="main"
-      maxWidth="none"
       sx={{
         marginY: 4,
         display: "flex",
@@ -24,7 +23,6 @@ const Home = () => {
         alignItems="center"
         justifyContent="center"
         maxWidth="md"
-        sx={{ height: "70vh" }}
       >
         <Grid item xs={12} sm={12} md={6}>
           <Typography
