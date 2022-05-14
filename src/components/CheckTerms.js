@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Grid, Box, Typography, Button, TextField } from "@mui/material";
+import { Grid, Container, Typography, Button, TextField } from "@mui/material";
 
 //Componente que recibe los datos solicitados a la API para mostrar todos los términos y ver su definición al hacer click en ellos
 const CheckTerms = ({ terms, categories }) => {
@@ -70,7 +70,13 @@ const CheckTerms = ({ terms, categories }) => {
     });
 
   return (
-    <Box component="main" sx={{ marginY: 8 }}>
+    <Container
+      component="main"
+      maxWidth="lg"
+      sx={{
+        marginY: { xs: 4, md: 8 },
+      }}
+    >
       <Typography
         variant="body1"
         component="p"
@@ -135,7 +141,7 @@ const CheckTerms = ({ terms, categories }) => {
         }
         onChange={(e) => setSelectedTerm(e.target.value)}
       ></TextField>
-    </Box>
+    </Container>
   );
 };
 
