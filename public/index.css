@@ -1,3 +1,7 @@
+html {
+  margin-left: calc(100vw - 100%);
+}
+
 body {
   margin: 0;
 }
@@ -6,7 +10,7 @@ body {
   margin-left: 25px;
 }
 
-.logo-container a:hover{
+.logo-container a:hover {
   border-bottom: 1px solid transparent;
-  transform: scale(1.05)
+  transform: scale(1.05);
 }
