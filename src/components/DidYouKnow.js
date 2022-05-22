@@ -10,8 +10,8 @@ const DidYouKnow = ({ random }) => {
       elevation={5}
       sx={{
         position: { xs: "static", xl: "absolute" },
-        top: "100px",
-        left: "25px",
+        top: "80px",
+        left: "35px",
         textAlign: "center",
         maxWidth: { xs: "82.23vw", md: 250 },
         maxHeight: { xs: 150, md: 150 },

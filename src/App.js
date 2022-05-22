@@ -80,7 +80,7 @@ const App = () => {
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center"
+          alignItems: "center",
         }}
       >
         <Header />
@@ -90,15 +90,12 @@ const App = () => {
         </Route>
         <Route path="/api">
           <ApiInfo />
-          <DidYouKnow random={random} />
         </Route>
         <Route path="/dictionary">
           <CheckTerms terms={terms} categories={categories} />
-          <DidYouKnow random={random} />
         </Route>
         <Route path="/cheatsheet">
           <CreateCheatsheet terms={terms} categories={categories} />
-          <DidYouKnow random={random} />
         </Route>
         <Footer />
       </Box>
