@@ -2,12 +2,13 @@ import React from "react";
 
 import Intro from "./Intro";
 import ShowSections from "./ShowSections";
+import AppAbout from "./AppAbout";
 
-import { Container } from "@mui/material";
+import { Box } from "@mui/material";
 
 const Home = () => {
   return (
-    <Container
+    <Box
       component="main"
       sx={{
         marginY: 4,
@@ -18,8 +19,10 @@ const Home = () => {
     >
       <Intro />
 
+      <AppAbout />
+
       <ShowSections />
-    </Container>
+    </Box>
   );
 };
 

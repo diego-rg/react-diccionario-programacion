@@ -78,9 +78,6 @@ const App = () => {
       <Box
         sx={{
           minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
         }}
       >
         <Header />
