@@ -18,7 +18,7 @@ const Intro = () => {
         md={6}
         sx={{
           padding: 4,
-          minHeight: "50vh",
+          minHeight: { xs: "50vh", sm: "50vh", md: "60vh" },
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

@@ -20,6 +20,7 @@ const DidYouKnow = ({ random }) => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        marginX: "auto",
       }}
     >
       <Typography variant="h6" component="h6">

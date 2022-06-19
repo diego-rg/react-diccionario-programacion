@@ -7,7 +7,7 @@ const AppAbout = () => {
     <Box
       component="section"
       sx={{
-        paddingY: 4,
+        paddingY: 1,
         background: "#f2f2f2",
         width: "100%",
         display: "flex",
@@ -25,187 +25,8 @@ const AppAbout = () => {
             padding: 4,
             display: "flex",
             flexDirection: "column",
+            justifyContent: "center",
             alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Box
-            sx={{
-              maxWidth: "500px",
-              textAlign: { xs: "center", sm: "center", md: "start" },
-            }}
-          >
-            <Typography
-              variant="body1"
-              component="p"
-              sx={{
-                textAlign: { xs: "center", sm: "center", md: "start" },
-              }}
-            >
-              Definiciones de fuentes oficiales.
-            </Typography>
-          </Box>
-        </Grid>
-
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={3}
-          sx={{
-            padding: 4,
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <Box
-            component="img"
-            src="/book.svg"
-            width="100%"
-            maxWidth="200px"
-            alt="Imagen de una mujer con un libro"
-          ></Box>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={3}
-          sx={{
-            padding: 4,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Box
-            sx={{
-              maxWidth: "500px",
-              textAlign: { xs: "center", sm: "center", md: "start" },
-            }}
-          >
-            <Typography
-              variant="body1"
-              component="p"
-              sx={{
-                textAlign: { xs: "center", sm: "center", md: "start" },
-              }}
-            >
-              Últimas tecnologías.
-            </Typography>
-          </Box>
-        </Grid>
-
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={3}
-          sx={{
-            padding: 4,
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <Box
-            component="img"
-            src="/book.svg"
-            width="100%"
-            maxWidth="200px"
-            alt="Imagen de una mujer con un libro"
-          ></Box>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={3}
-          sx={{
-            padding: 4,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Box
-            sx={{
-              maxWidth: "500px",
-              textAlign: { xs: "center", sm: "center", md: "start" },
-            }}
-          >
-            <Typography
-              variant="body1"
-              component="p"
-              sx={{
-                textAlign: { xs: "center", sm: "center", md: "start" },
-              }}
-            >
-              Clasificación por categorías.
-            </Typography>
-          </Box>
-        </Grid>
-
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={3}
-          sx={{
-            padding: 4,
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <Box
-            component="img"
-            src="/book.svg"
-            width="100%"
-            maxWidth="200px"
-            alt="Imagen de una mujer con un libro"
-          ></Box>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={3}
-          sx={{
-            padding: 4,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Box
-            sx={{
-              maxWidth: "500px",
-              textAlign: { xs: "center", sm: "center", md: "start" },
-            }}
-          >
-            <Typography
-              variant="body1"
-              component="p"
-              sx={{
-                textAlign: { xs: "center", sm: "center", md: "start" },
-              }}
-            >
-              Traducido al español.
-            </Typography>
-          </Box>
-        </Grid>
-
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={3}
-          sx={{
-            padding: 4,
-            display: "flex",
-            justifyContent: "center",
           }}
         >
           <Box
@@ -215,6 +36,110 @@ const AppAbout = () => {
             maxWidth="200px"
             alt="Imagen de tres personas trabajado."
           ></Box>
+          <Typography
+            variant="body1"
+            component="p"
+            sx={{
+              textAlign: "center",
+              paddingTop: 4,
+            }}
+          >
+            Traducido al español.
+          </Typography>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={3}
+          sx={{
+            padding: 4,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            component="img"
+            src="/languaje.svg"
+            width="100%"
+            maxWidth="200px"
+            alt="Imagen de tres personas trabajado."
+          ></Box>
+          <Typography
+            variant="body1"
+            component="p"
+            sx={{
+              textAlign: "center",
+              paddingTop: 4,
+            }}
+          >
+            Traducido al español.
+          </Typography>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={3}
+          sx={{
+            padding: 4,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            component="img"
+            src="/languaje.svg"
+            width="100%"
+            maxWidth="200px"
+            alt="Imagen de tres personas trabajado."
+          ></Box>
+          <Typography
+            variant="body1"
+            component="p"
+            sx={{
+              textAlign: "center",
+              paddingTop: 4,
+            }}
+          >
+            Traducido al español.
+          </Typography>
+        </Grid>
+
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={3}
+          sx={{
+            padding: 4,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            component="img"
+            src="/languaje.svg"
+            width="100%"
+            maxWidth="200px"
+            alt="Imagen de tres personas trabajado."
+          ></Box>
+          <Typography
+            variant="body1"
+            component="p"
+            sx={{
+              textAlign: "center",
+              paddingTop: 4,
+            }}
+          >
+            Traducido al español.
+          </Typography>
         </Grid>
       </Grid>
     </Box>
