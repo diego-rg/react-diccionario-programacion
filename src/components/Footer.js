@@ -9,6 +9,10 @@ const Footer = () => {
       sx={{
         paddingY: 2,
         marginTop: "auto",
+        height: "10vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
       <Typography

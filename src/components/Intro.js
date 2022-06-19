@@ -9,7 +9,7 @@ const Intro = () => {
       container
       alignItems="center"
       justifyContent="center"
-      maxWidth="md"
+      maxWidth="lg"
     >
       <Grid
         item
@@ -17,12 +17,12 @@ const Intro = () => {
         sm={12}
         md={6}
         sx={{
-          padding: 4,
+          padding: 3,
           minHeight: { xs: "50vh", sm: "50vh", md: "60vh" },
           display: "flex",
-          flexDirection: "column",
+          flexDirection: "row",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "space-between",
         }}
       >
         <Box
@@ -64,9 +64,9 @@ const Intro = () => {
         sm={12}
         md={6}
         sx={{
-          padding: 4,
+          padding: 3,
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "flex-end",
           order: { xs: -1, sm: -1, md: 1 },
         }}
       >
