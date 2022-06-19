@@ -34,7 +34,7 @@ const AppAbout = () => {
             src="/brand.svg"
             width="100%"
             maxWidth="176px"
-            alt="Imagen de tres personas trabajado."
+            alt="Imagen de dos personas trabajando con varias app."
           ></Box>
           <Typography
             variant="body1"
@@ -65,7 +65,7 @@ const AppAbout = () => {
             src="/technologies.svg"
             width="100%"
             maxWidth="156px"
-            alt="Imagen de tres personas trabajado."
+            alt="Imagen de varios framework y librerías de JavaScript"
           ></Box>
           <Typography
             variant="body1"
@@ -93,9 +93,9 @@ const AppAbout = () => {
         >
           <Box
             component="img"
-            src="/languaje.svg"
+            src="/order.svg"
             width="100%"
-            maxWidth="200px"
+            maxWidth="128px"
             alt="Imagen de tres personas trabajado."
           ></Box>
           <Typography
@@ -106,7 +106,7 @@ const AppAbout = () => {
               paddingTop: 4,
             }}
           >
-            Traducido al español.
+            Clasificado por categorías.
           </Typography>
         </Grid>
 
