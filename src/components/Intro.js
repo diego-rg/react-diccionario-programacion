@@ -32,7 +32,7 @@ const Intro = () => {
           }}
         >
           <Typography
-            variant="body1"
+            variant="subtitle1"
             component="p"
             sx={{
               textAlign: { xs: "center", sm: "center", md: "start" },
@@ -45,7 +45,7 @@ const Intro = () => {
             sx={{
               marginY: 2,
               fontSize: {
-                xs: "0.8rem",
+                xs: "0.9rem",
                 sm: "1.05rem",
               },
             }}

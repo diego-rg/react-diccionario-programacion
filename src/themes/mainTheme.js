@@ -35,6 +35,16 @@ let mainTheme = createTheme({
           },
           style: {
             fontFamily: "Josefin Sans",
+            fontSize: "1rem",
+          },
+        },
+        {
+          props: {
+            variant: "subtitle1",
+          },
+          style: {
+            fontFamily: "Josefin Sans",
+            fontSize: "1.4rem",
           },
         },
         {
