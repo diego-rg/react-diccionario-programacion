@@ -19,7 +19,7 @@ const AppAbout = () => {
         <Grid
           item
           xs={12}
-          sm={12}
+          sm={6}
           md={3}
           sx={{
             padding: 4,
@@ -50,7 +50,7 @@ const AppAbout = () => {
         <Grid
           item
           xs={12}
-          sm={12}
+          sm={6}
           md={3}
           sx={{
             padding: 4,
@@ -81,7 +81,7 @@ const AppAbout = () => {
         <Grid
           item
           xs={12}
-          sm={12}
+          sm={6}
           md={3}
           sx={{
             padding: 4,
@@ -113,7 +113,7 @@ const AppAbout = () => {
         <Grid
           item
           xs={12}
-          sm={12}
+          sm={6}
           md={3}
           sx={{
             padding: 4,

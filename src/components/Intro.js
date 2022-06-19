@@ -22,7 +22,7 @@ const Intro = () => {
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          justifyContent: "space-between",
+          justifyContent: "center",
         }}
       >
         <Box
@@ -66,7 +66,7 @@ const Intro = () => {
         sx={{
           padding: 3,
           display: "flex",
-          justifyContent: "flex-end",
+          justifyContent: "center",
           order: { xs: -1, sm: -1, md: 1 },
         }}
       >
