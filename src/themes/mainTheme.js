@@ -35,7 +35,7 @@ let mainTheme = createTheme({
           },
           style: {
             fontFamily: "Josefin Sans",
-            fontSize: "1rem",
+            fontSize: "0.9rem",
           },
         },
         {

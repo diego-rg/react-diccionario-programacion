@@ -15,7 +15,7 @@ const DidYouKnow = ({ random }) => {
         textAlign: "center",
         maxWidth: { xs: "82.23vw", md: 250 },
         maxHeight: { xs: 150, md: 150 },
-        padding: 2,
+        padding: 3,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

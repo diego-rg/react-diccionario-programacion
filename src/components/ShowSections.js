@@ -36,7 +36,7 @@ const ShowSections = () => {
                 <Typography gutterBottom variant="body2" component="h2">
                   Diccionario
                 </Typography>
-                <Typography variant="subtitle2" color="text.secondary">
+                <Typography variant="body1" color="text.secondary">
                   Consulta el diccionario de términos sobre programación web y
                   sus definiciones.
                 </Typography>
@@ -65,7 +65,7 @@ const ShowSections = () => {
                 <Typography gutterBottom variant="body2" component="h2">
                   Apuntes
                 </Typography>
-                <Typography variant="subtitle2" color="text.secondary">
+                <Typography variant="body1" color="text.secondary">
                   Crea tus propios apuntes seleccionando los términos que
                   necesites y descárgalos.
                 </Typography>
@@ -94,7 +94,7 @@ const ShowSections = () => {
                 <Typography gutterBottom variant="body2" component="h2">
                   API
                 </Typography>
-                <Typography variant="subtitle2" color="text.secondary">
+                <Typography variant="body1" color="text.secondary">
                   Comprueba la documentación de nuestra API y consúmela en tus
                   proyectos.
                 </Typography>
