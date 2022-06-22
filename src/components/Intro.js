@@ -10,6 +10,7 @@ const Intro = () => {
       alignItems="center"
       justifyContent="center"
       maxWidth="lg"
+      sx={{ minHeight: "87vh", padding: 2 }}
     >
       <Grid
         item
@@ -17,8 +18,6 @@ const Intro = () => {
         sm={12}
         md={6}
         sx={{
-          padding: 3,
-          minHeight: { xs: "50vh", sm: "50vh", md: "60vh" },
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
@@ -27,10 +26,22 @@ const Intro = () => {
       >
         <Box
           sx={{
+            paddingY: 4,
             maxWidth: "500px",
             textAlign: { xs: "center", sm: "center", md: "start" },
           }}
         >
+          <Typography
+            variant="h3"
+            component="h3"
+            sx={{
+              textAlign: { xs: "center", sm: "center", md: "start" },
+              paddingY: 2,
+              display: { xs: "none", sm: "inherit" },
+            }}
+          >
+            Diccionario programación.
+          </Typography>
           <Typography
             variant="subtitle1"
             component="p"
@@ -64,7 +75,6 @@ const Intro = () => {
         sm={12}
         md={6}
         sx={{
-          padding: 3,
           display: "flex",
           justifyContent: "center",
           order: { xs: -1, sm: -1, md: 1 },
@@ -74,7 +84,7 @@ const Intro = () => {
           component="img"
           src="/book.svg"
           width="100%"
-          maxWidth="400px"
+          maxWidth="500px"
           alt="Imagen de una mujer con un libro"
         ></Box>
       </Grid>

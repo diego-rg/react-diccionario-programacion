@@ -49,6 +49,15 @@ let mainTheme = createTheme({
         },
         {
           props: {
+            variant: "h3",
+          },
+          style: {
+            fontFamily: "Josefin Sans",
+            fontSize: "2rem",
+          },
+        },
+        {
+          props: {
             variant: "h5",
           },
           style: {
