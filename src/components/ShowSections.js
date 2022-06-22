@@ -13,7 +13,7 @@ const ShowSections = () => {
       component="section"
       spacing={7}
       container
-      sx={{ marginY: 4 }}
+      sx={{ marginY: 3 }}
       alignItems="center"
       justifyContent="center"
     >
@@ -25,7 +25,7 @@ const ShowSections = () => {
               boxShadow: "none",
             }}
           >
-            <CardActionArea sx={{ padding: 2 }}>
+            <CardActionArea sx={{ padding: 4 }}>
               <CardMedia
                 component="img"
                 height="auto"
@@ -54,7 +54,7 @@ const ShowSections = () => {
               boxShadow: "none",
             }}
           >
-            <CardActionArea sx={{ padding: 2 }}>
+            <CardActionArea sx={{ padding: 4 }}>
               <CardMedia
                 component="img"
                 height="auto"
@@ -83,7 +83,7 @@ const ShowSections = () => {
               boxShadow: "none",
             }}
           >
-            <CardActionArea sx={{ padding: 2 }}>
+            <CardActionArea sx={{ padding: 4 }}>
               <CardMedia
                 component="img"
                 height="auto"
