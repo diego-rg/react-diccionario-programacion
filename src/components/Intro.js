@@ -40,7 +40,7 @@ const Intro = () => {
               display: { xs: "none", sm: "inherit" },
             }}
           >
-            Diccionario programación.
+            Diccionario de programación.
           </Typography>
           <Typography
             variant="subtitle1"
