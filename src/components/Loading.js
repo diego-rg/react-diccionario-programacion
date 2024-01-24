@@ -32,6 +32,17 @@ const Loading = () => {
       >
         Esperando la respuesta de la API...
       </Typography>
+      <Typography
+        variant="h6"
+        component="p"
+        sx={{
+          color: "white",
+          textAlign: "center",
+          padding: 4,
+        }}
+      >
+        Puede tardar hasta 30 segundos en cargar después de un período de inactividad.
+      </Typography>
     </Box>
   );
 };
